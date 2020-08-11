@@ -1,0 +1,55 @@
+{extend name='main'}
+
+{block name="button"}
+
+{if auth("add")}
+<button data-modal='{:url("add")}' data-title="添加行业" class='layui-btn layui-btn-sm layui-btn-primary'>添加行业</button>
+{/if}
+
+{/block}
+
+{block name="content"}
+<div class="think-box-shadow">
+    {empty name='list'}
+    <blockquote class="layui-elem-quote">没 有 记 录 哦！</blockquote>
+    {else}
+    {include file='index/index_search'}
+    <table class="layui-table" lay-skin="line">
+        <thead>
+        <tr>
+            <th class='list-table-sort-td'>
+                <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+            </th>
+            <th>标题</th>
+            <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+            {foreach $list as $key=>$vo}
+            <tr data-dbclick>
+                <td class='list-table-sort-td'></td>
+                <td class="nowrap"><span class="color-desc">{$vo.spl|raw}</span>{$vo.industry_name}</td>
+                <td class='text-center nowrap notselect'>
+
+                    {if auth("add")}
+                    {if $vo.pid <= 0}
+                    <a class="layui-btn layui-btn-xs layui-btn-primary" data-title="添加子行业" data-modal='{:url("add")}?pid={$vo.industry_id}'>添 加</a>
+                    {/if}
+                    {/if}
+
+                    {if auth("edit")}
+                    <a data-dbclick class="layui-btn layui-btn-xs" data-title="编辑" data-modal='{:url("edit")}?industry_id={$vo.industry_id}'>编 辑</a>
+                    {/if}
+
+                    {if auth("remove")}
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" data-confirm="确定要删除 '{$vo.industry_name}' 以及子行业吗?" data-action="{:url('remove')}" data-value="industry_id#{$vo.industry_id}" data-csrf="{:systoken('remove')}">删 除</a>
+                    {/if}
+
+                </td>
+            </tr>
+            {/foreach}
+        </tbody>
+    </table>
+    {/empty}
+</div>
+{/block}

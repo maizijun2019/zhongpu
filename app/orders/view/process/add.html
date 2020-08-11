@@ -1,0 +1,89 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block">
+                <button class="layui-btn" onclick="addLine()" type="button">添加一行</button>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">简称</label>
+            <div class="layui-input-block">
+                <input class="layui-input" name="name" required>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block" style="max-height: 300px;overflow: auto">
+                <table class="layui-table margin-top-10" lay-skin="line">
+                    <thead>
+                    <tr>
+                        <th class='text-left nowrap'>流程名称</th>
+                        <th class='text-left nowrap'>所需权限</th>
+                        <th class='text-left nowrap'>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="add_tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block">
+                <textarea class="layui-textarea" name="describe" placeholder="描述"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    function addLine(){
+        $("#add_tbody").append(
+            "<tr>" +
+                "<td class='text-left nowrap'>" +
+                    "<div class=\"inline-block sub-span-blue\">" +
+                        "<input name='state[" + $("#add_tbody").children().length + "][name]' class='layui-input' required placeholder='请填写流程名称'>" +
+                    "</div>" +
+                "</td>" +
+                "<td class='text-left nowrap'>" +
+                    "<div class=\"inline-block\">" +
+                        "<input type=\"checkbox\" name=\"state[" + $("#add_tbody").children().length + "][auth][approval]\" title=\"审批\">" +
+                        "<input type=\"checkbox\" name=\"state[" + $("#add_tbody").children().length + "][auth][upload]\" title=\"上传\">" +
+                    "</div>" +
+                "</td>" +
+                "<td class='text-left nowrap'>" +
+                    "<a class=\"layui-btn layui-btn-danger layui-btn-xs\" data-confirm=\"确定要删除吗?\" onclick='removeLine(this)'>删 除</a>" +
+                "</td>" +
+            "</tr>");
+        form.render();
+    }
+
+    function removeLine(e){
+        e.parentNode.parentNode.remove();
+        var tr = $("#add_tbody").children("tr");
+        for(var i = 0;i < tr.length;i++){
+            var input = $(tr[i]).find("input");
+            $(input[0]).attr("name","state[" + i + "][name]");
+            $(input[1]).attr("name","state[" + i + "][auth][approval]");
+            $(input[2]).attr("name","state[" + i + "][auth][upload]");
+        }
+    }
+    form.render();
+</script>
+{/block}

@@ -1,0 +1,53 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-input-inline">
+                <select id="projectLevel" name="project_level_id" class="layui-select">
+                    <option value="all">全部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">年区间</label>
+            <div class="layui-input-inline">
+                <input name="start_year" value="{:input('start_year')}" class="layui-input">
+            </div>
+            <div class="layui-input-inline">
+                <input name="end_year" value="{:input('end_year')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+        </div>
+    </form>
+
+</fieldset>
+
+<script>
+    $.ajax({
+        url:"{:url('patentLevel')}",
+        method:"GET",
+        success:function(data){
+            tree = JSON.parse(data);
+            var project_level_id = '{:input("project_level_id")}';
+            var select = "";
+            for(var i = 0;i < tree.length;i++){
+                select = "";
+                if(project_level_id > 0 && project_level_id == tree[i].project_level_id){
+                    select = "selected";
+                }
+                $("#projectLevel").append("<option " + select + " value='" + tree[i].project_level_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].title + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    form.render();
+</script>

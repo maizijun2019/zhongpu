@@ -1,0 +1,69 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">截止日期</label>
+            <div class="layui-input-block">
+                <input value="{$vo.pay_end_date_text|default=''}" placeholder="没有缴费记录" readonly class="layui-input">
+                <p class="help-block">只读项，不可编辑</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">缴费时长(年)</label>
+            <div class="layui-input-block">
+                <input name="year" type="number" required placeholder="请填写缴费时长" class="layui-input">
+                <p class="help-block">必填，请填写正整数，小数位将被舍弃</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">减费比例</label>
+            <div class="layui-input-block">
+                <select id="reduce" name="reduce" class="layui-select">
+                    <option value="0">无减缓</option>
+                    <option value="70">减缓70%</option>
+                    <option value="85">减缓85%</option>
+                </select>
+                <p class="help-block">必选</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    <input type='hidden' value='{$vo.patent_id}' name='patent_id'>
+    {notempty name='vo.project_level_id'}<input type='hidden' value='{$vo.project_level_id}' name='project_level_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    var reduce = "{$vo.reduce|default=0}";
+    if(reduce > 0){
+        var reduceElement = document.getElementById("reduce");
+        for(var i = 0;i < reduceElement.length;i++){
+            if(reduce == reduceElement[i].value){
+                reduceElement[i].selected = true;
+            }
+        }
+    }
+
+    var pay = "{$vo.pay|default='N'}";
+    if(pay == 'Y'){
+        var payEdit = document.getElementById("payEdit");
+        for(var i = 0;i < payEdit.length;i++){
+            if(pay == payEdit[i].value){
+                payEdit[i].selected = true;
+            }
+        }
+    }
+    form.render();
+</script>
+{/block}

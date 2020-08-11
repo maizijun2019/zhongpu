@@ -1,0 +1,58 @@
+
+{extend name='main'}
+
+{block name="button"}
+
+<button data-modal='{:url("add2")}' data-title="预下单" class='layui-btn layui-btn-sm layui-btn-primary'>预下单</button>
+
+{/block}
+
+{block name="content"}
+<div class="layui-tab layui-tab-card think-bg-white">
+    <div class="layui-tab-content think-box-shadow">
+        {include file='index/index_search'}
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+              <li id="approvaling" class="layui-this">待审核订单</li>
+              <li id="approvaled">已审核订单</li>
+              <li id="reject">驳回订单</li>
+              <li id="all">全部订单</li>
+            </ul>
+            <div class="layui-tab-content">
+                {include file="index/orders"}
+            </div>
+          </div> 
+    
+
+        {empty name='list'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+    </div>
+</div>
+{/block}
+
+<script>
+    $(document).ready(function() {
+        // 获取待审核订单
+        $("#approvaling").click(function() {
+
+
+        })
+
+        // 获取已审核订单
+
+
+        // 获取全部订单
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+</script>

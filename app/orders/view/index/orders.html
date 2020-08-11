@@ -1,0 +1,109 @@
+<table class="layui-table margin-top-0" lay-skin="line">
+  {notempty name='list'}
+  <thead>
+  <tr>
+      <th class='list-table-sort-td'>
+          <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+      </th>
+      <th class='text-left nowrap'>订单号</th>
+      <th class='text-left nowrap'>项目名称</th>
+      <th class='text-left nowrap'>企业名称</th>
+      <th class='text-left nowrap'>商务人员</th>
+      <th class='text-left nowrap'>技术咨询师</th>
+      <th class='text-left nowrap'>审批人</th>
+      <th class='text-left nowrap'>状态</th>
+      <th class='text-left nowrap'>付款方式</th>
+      <th class='text-left nowrap'>是否结算</th>
+      <th class='text-left nowrap'>下单日期</th>
+      <th class="text_left nowrap">审批时间</th>
+      <th class='text-left nowrap'>操作</th>
+      <th class='text-left nowrap'>审核记录</th>
+  </tr>
+  </thead>
+  {/notempty}
+  <tbody>
+  {foreach $list as $key=>$vo}
+  <tr data-dbclick>
+      <td></td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo.orders_id|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo->getProjectName($vo->project_id)|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo->getEnterpriseName($vo->enterprise_id)|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{php}echo getOperatorNames($vo->receiving_user_ids){/php}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <a data-title="技术咨询师" data-modal='{:url("responsibleInfo")}?orders_id={$vo.orders_id}'><span>含有{$vo.responsible_size|default=0|raw}人</span></a>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{php}echo getOperatorUsername($vo->approval_user_id);{/php}</span>
+          </div>
+      </td>
+      <!-- 状态 -->
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>
+                  {if $vo['state'] == 'REJECT'}
+                    驳回
+                  {elseif $vo['state'] == 'FINISH'/}
+                    完成审核
+                  {else/}
+                    {$vo['stage']|default=''}
+                  {/if}
+              </span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo.payment_method|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo.settlement|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo.create_time|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          <div class="inline-block sub-span-blue">
+              <span>{$vo.approval_time|default=''|raw}</span>
+          </div>
+      </td>
+      <td class='text-left nowrap'>
+          {if auth("process")}
+          <a class="layui-btn layui-btn-xs" data-modal='{:url("process")}?orders_id={$vo.orders_id}'>审核</a>
+          {/if}
+          {if auth("edit")}
+          <a data-dbclick class="layui-btn layui-btn-xs" data-title="编辑" data-modal='{:url("edit")}?orders_id={$vo.orders_id}'>编 辑</a>
+          {/if}
+          {if auth("remove")}
+          <a class="layui-btn layui-btn-danger layui-btn-xs" data-confirm="确定要删除吗?" data-action="{:url('remove')}" data-value="orders_id#{$vo.orders_id}" data-csrf="{:systoken('remove')}">删 除</a>
+          {/if}
+      </td>
+      <td>
+          <a data-modal="{:url('getRecord')}?order_id={$vo.orders_id}">查看记录</a>
+      </td>
+  </tr>
+  {/foreach}
+  </tbody>
+</table>

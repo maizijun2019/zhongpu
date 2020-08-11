@@ -1,0 +1,148 @@
+[2020-07-23 13:18:19][sql] CONNECT:[ UseTime:0.061706s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:18:19][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.037016s ]
+[2020-07-23 13:18:19][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.036036s ]
+[2020-07-23 13:18:19][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.036518s ]
+[2020-07-23 13:18:19][sql] CONNECT:[ UseTime:0.062191s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:18:19][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.037932s ]
+[2020-07-23 13:18:19][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.043321s ]
+[2020-07-23 14:01:47][sql] CONNECT:[ UseTime:0.001412s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:47][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001689s ]
+[2020-07-23 14:01:47][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000950s ]
+[2020-07-23 14:01:47][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000438s ]
+[2020-07-23 14:01:47][sql] CONNECT:[ UseTime:0.001282s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:47][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001443s ]
+[2020-07-23 14:01:47][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000406s ]
+[2020-07-23 14:02:24][sql] CONNECT:[ UseTime:0.011430s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:24][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001638s ]
+[2020-07-23 14:02:24][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000637s ]
+[2020-07-23 14:02:24][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000411s ]
+[2020-07-23 14:02:24][sql] CONNECT:[ UseTime:0.001398s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:24][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001580s ]
+[2020-07-23 14:02:24][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000559s ]
+[2020-07-23 14:03:03][sql] CONNECT:[ UseTime:0.001241s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:03:03][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.002695s ]
+[2020-07-23 14:03:03][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000613s ]
+[2020-07-23 14:03:03][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000250s ]
+[2020-07-23 14:03:03][sql] CONNECT:[ UseTime:0.001311s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:03:03][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001700s ]
+[2020-07-23 14:03:03][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000492s ]
+[2020-07-23 14:48:56][sql] CONNECT:[ UseTime:0.001354s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:56][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001640s ]
+[2020-07-23 14:48:56][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000585s ]
+[2020-07-23 14:48:56][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000450s ]
+[2020-07-23 14:48:56][sql] CONNECT:[ UseTime:0.011185s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:56][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001956s ]
+[2020-07-23 14:48:56][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.001291s ]
+[2020-07-23 14:49:52][sql] CONNECT:[ UseTime:0.010366s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:52][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001815s ]
+[2020-07-23 14:49:52][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000820s ]
+[2020-07-23 14:49:52][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000374s ]
+[2020-07-23 14:49:52][sql] CONNECT:[ UseTime:0.001388s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:52][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001657s ]
+[2020-07-23 14:49:52][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000617s ]
+[2020-07-23 15:02:21][sql] CONNECT:[ UseTime:0.001323s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:21][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001613s ]
+[2020-07-23 15:02:21][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000480s ]
+[2020-07-23 15:02:21][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000464s ]
+[2020-07-23 15:02:21][sql] CONNECT:[ UseTime:0.001268s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:21][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001520s ]
+[2020-07-23 15:02:21][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000403s ]
+[2020-07-23 15:03:09][sql] CONNECT:[ UseTime:0.010527s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:09][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001694s ]
+[2020-07-23 15:03:09][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000625s ]
+[2020-07-23 15:03:09][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000399s ]
+[2020-07-23 15:03:09][sql] CONNECT:[ UseTime:0.010275s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:09][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.002117s ]
+[2020-07-23 15:03:09][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000734s ]
+[2020-07-23 15:03:32][sql] CONNECT:[ UseTime:0.002061s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:32][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.002488s ]
+[2020-07-23 15:03:32][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000829s ]
+[2020-07-23 15:03:32][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000615s ]
+[2020-07-23 15:03:33][sql] CONNECT:[ UseTime:0.001393s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:33][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001577s ]
+[2020-07-23 15:03:33][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000551s ]
+[2020-07-23 15:03:41][sql] CONNECT:[ UseTime:0.001243s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:41][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001591s ]
+[2020-07-23 15:03:41][sql] SELECT `content` FROM `zp_news` WHERE  `news_id` = 1 LIMIT 1 [ RunTime:0.000559s ]
+[2020-07-23 15:03:47][sql] CONNECT:[ UseTime:0.001224s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:47][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.002745s ]
+[2020-07-23 15:03:47][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000638s ]
+[2020-07-23 15:04:51][sql] CONNECT:[ UseTime:0.001435s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:51][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001619s ]
+[2020-07-23 15:04:51][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000650s ]
+[2020-07-23 15:04:51][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000398s ]
+[2020-07-23 15:04:51][sql] CONNECT:[ UseTime:0.001310s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:51][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001540s ]
+[2020-07-23 15:04:51][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000543s ]
+[2020-07-23 19:45:30][sql] CONNECT:[ UseTime:0.001372s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:30][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001624s ]
+[2020-07-23 19:45:30][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.001022s ]
+[2020-07-23 19:45:30][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000444s ]
+[2020-07-23 19:45:30][sql] CONNECT:[ UseTime:0.001367s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:30][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001651s ]
+[2020-07-23 19:45:30][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000500s ]
+[2020-07-23 19:45:39][sql] CONNECT:[ UseTime:0.001344s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:39][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001622s ]
+[2020-07-23 19:45:39][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000895s ]
+[2020-07-23 19:45:39][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000378s ]
+[2020-07-23 19:45:39][sql] CONNECT:[ UseTime:0.012109s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:39][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.003862s ]
+[2020-07-23 19:45:39][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.001854s ]
+[2020-07-24 13:52:01][sql] CONNECT:[ UseTime:0.001349s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:52:01][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.002117s ]
+[2020-07-24 13:52:01][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.002533s ]
+[2020-07-24 13:52:01][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000424s ]
+[2020-07-24 13:52:01][sql] CONNECT:[ UseTime:0.011110s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:52:01][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001642s ]
+[2020-07-24 13:52:01][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000647s ]
+[2020-08-08 01:00:52][sql] CONNECT:[ UseTime:0.001293s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:00:52][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.002910s ]
+[2020-08-08 01:00:52][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.011496s ]
+[2020-08-08 01:00:52][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.001050s ]
+[2020-08-08 01:00:52][sql] CONNECT:[ UseTime:0.010659s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:00:52][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.002692s ]
+[2020-08-08 01:00:52][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000607s ]
+[2020-08-08 01:01:05][sql] CONNECT:[ UseTime:0.011396s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:01:05][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.001911s ]
+[2020-08-08 01:01:05][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.000416s ]
+[2020-08-08 01:01:05][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000403s ]
+[2020-08-08 01:01:05][sql] CONNECT:[ UseTime:0.001284s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:01:05][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001708s ]
+[2020-08-08 01:01:05][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000422s ]
+[2020-08-09 22:07:45][sql] CONNECT:[ UseTime:0.011713s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:45][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.003242s ]
+[2020-08-09 22:07:45][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.007640s ]
+[2020-08-09 22:07:45][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.000911s ]
+[2020-08-09 22:07:45][sql] CONNECT:[ UseTime:0.003379s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:45][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.003143s ]
+[2020-08-09 22:07:45][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.001130s ]
+[2020-08-09 22:39:54][sql] CONNECT:[ UseTime:0.052244s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:39:54][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.038412s ]
+[2020-08-09 22:39:54][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.034823s ]
+[2020-08-09 22:39:54][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.035529s ]
+[2020-08-09 22:39:54][sql] CONNECT:[ UseTime:0.044627s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:39:54][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.032669s ]
+[2020-08-09 22:39:54][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.035350s ]
+[2020-08-10 10:00:56][sql] CONNECT:[ UseTime:0.045922s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:00:56][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.029916s ]
+[2020-08-10 10:00:56][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.029009s ]
+[2020-08-10 10:00:56][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.029829s ]
+[2020-08-10 10:00:56][sql] CONNECT:[ UseTime:0.049488s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:00:56][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.074889s ]
+[2020-08-10 10:00:56][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.032856s ]
+[2020-08-10 10:10:03][sql] CONNECT:[ UseTime:0.072008s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:10:03][sql] SHOW FULL COLUMNS FROM `zp_news` [ RunTime:0.060885s ]
+[2020-08-10 10:10:03][sql] SELECT COUNT(*) AS think_count FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` [ RunTime:0.046752s ]
+[2020-08-10 10:10:03][sql] SELECT `a`.`news_id`,`a`.`title`,`a`.`create_time`,`b`.`type_name` FROM `zp_news` `a` INNER JOIN `zp_news_type` `b` ON `a`.`news_type_id`=`b`.`news_type_id` ORDER BY `a`.`news_id` DESC LIMIT 0,20 [ RunTime:0.040903s ]
+[2020-08-10 10:10:03][sql] CONNECT:[ UseTime:0.067902s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:10:03][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.044132s ]
+[2020-08-10 10:10:03][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.039634s ]
+[2020-08-10 17:28:36][sql] CONNECT:[ UseTime:0.001934s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 17:28:36][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.004616s ]
+[2020-08-10 17:28:36][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.007889s ]
+[2020-08-10 17:29:05][sql] CONNECT:[ UseTime:0.012181s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 17:29:05][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001584s ]
+[2020-08-10 17:29:05][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000529s ]
+[2020-08-10 17:29:07][sql] CONNECT:[ UseTime:0.001172s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 17:29:07][sql] SHOW FULL COLUMNS FROM `zp_news_type` [ RunTime:0.001734s ]
+[2020-08-10 17:29:07][sql] SELECT * FROM `zp_news_type` ORDER BY `news_type_id` ASC [ RunTime:0.000525s ]

@@ -1,0 +1,22 @@
+[2020-07-23 13:30:10][error] [1045]SQLSTATE[HY000] [1045] Access denied for user ''@'115.218.154.212' (using password: NO)[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-07-23 13:30:49][error] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'115.218.154.212' (using password: NO)[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-07-23 14:01:11][error] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-07-24 13:59:39][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zpsystem_user' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-24 14:00:03][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_system_user' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-24 14:00:04][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_system_user' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-24 14:00:04][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_system_user' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-24 14:00:05][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_system_user' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-24 14:00:05][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_system_user' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-08-05 22:19:56][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-08-05 22:20:23][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-08-05 22:20:32][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-08-07 16:31:48][error] [0]璇硶閿欒: unexpected 'public' (T_PUBLIC)[E:\Pro\pro\ZP\app\orders\controller\Index.php:930]
+[2020-08-08 00:57:52][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-08-08 10:18:46][error] [0]璇硶閿欒: unexpected 'public' (T_PUBLIC)[E:\Pro\pro\ZP\app\orders\controller\Index.php:944]
+[2020-08-10 11:23:27][error] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-08-10 11:23:30][error] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]
+[2020-08-10 11:23:38][error] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:554]

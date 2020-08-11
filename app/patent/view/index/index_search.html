@@ -1,0 +1,80 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">申请号/专利号</label>
+            <div class="layui-input-inline">
+                <input id="patent_no_search" name="patent_no" value="{:input('patent_no')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">发明名称</label>
+            <div class="layui-input-inline">
+                <input id="patent_name_search" name="patent_name" value="{:input('patent_name')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">申请人</label>
+            <div class="layui-input-inline">
+                <input id="apply_people_search" name="apply_people" value="{:input('apply_people')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">申请日</label>
+            <div class="layui-input-inline">
+                <input data-date-range id="apply_date_search" name="apply_date" value="{:input('apply_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-input-inline">
+                <select id="project_level_id_search" name="project_level_id" class="layui-select">
+                    <option value="all">全部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+            <button class="layui-btn layui-btn-primary" type="button" onclick="exportExcel()"><i class="layui-icon layui-icon-export"></i>导 出</button>
+        </div>
+    </form>
+
+</fieldset>
+<script>
+    $.ajax({
+        url:"{:url('patentLevel')}",
+        method:"GET",
+        success:function(data){
+            tree = JSON.parse(data);
+            var project_level_id = "{:input('project_level_id')}";
+            var select = "";
+            for(var i = 0;i < tree.length;i++){
+                select = "";
+                if(project_level_id > 0 && project_level_id == tree[i].project_level_id){
+                    select = "selected";
+                }
+                $("#project_level_id_search").append("<option " + select + " value='" + tree[i].project_level_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].title + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    function exportExcel(){
+        var url = "{:url('exportExcel')}?patent_no=" + $("#patent_no_search").val() + "&patent_name=" + $("#patent_name_search").val()
+            + "&apply_people=" + $("#apply_people_search").val() + "&apply_date=" + $("#apply_date_search").val()
+            + "&project_level_id=" + $("#project_level_id_search").val();
+        var a = document.createElement("a");
+        a.setAttribute("href",url);
+        a.click();
+    }
+
+    form.render();
+</script>

@@ -1,0 +1,25 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">标题</label>
+            <div class="layui-input-block">
+                <input value="{$vo.title|default=''}" readonly class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">正文</label>
+            <div class="layui-input-block">
+                <textarea class="layui-textarea" readonly>{$vo.content|default=''}</textarea>
+            </div>
+        </div>
+
+    </div>
+    <div class="hr-line-dashed"></div>
+
+</form>
+<script>
+    form.render();
+</script>

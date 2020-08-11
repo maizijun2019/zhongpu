@@ -1,0 +1,6 @@
+[2020-07-23 13:19:35][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_project_level_type' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-23 13:31:31][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_project' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-23 13:32:05][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_project' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-23 13:32:52][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_project' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-23 13:32:54][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_project' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-07-23 13:33:56][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhongpu_db.zp_project' doesn't exist[E:\Pro\pro\ZP\vendor\topthink\think-orm\src\db\PDOConnection.php:722]

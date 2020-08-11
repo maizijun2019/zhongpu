@@ -1,0 +1,22 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类名称</label>
+            <div class="layui-input-block">
+                <input name="type" value='{$vo.type|default=""}' required placeholder="请输入分类名称" class="layui-input">
+                <p class="help-block">必填，已存在的分类名称会添加失败</p>
+            </div>
+        </div>
+
+    </div>
+    {notempty name='vo.type_id'}<input type='hidden' value='{$vo.type_id}' name='type_id'>{/notempty}
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>

@@ -1,0 +1,3 @@
+<?php /*a:1:{s:57:"E:\Pro\pro\ZP\app\orders\view\index\publicity_result.html";i:1595475123;}*/ ?>
+<form class="layui-form layui-card" action="<?php echo request()->url(); ?>" data-auto="true" method="post" autocomplete="off"><div class="layui-card-body"><div class="layui-form-item"><label class="layui-form-label">公示结果</label><div class="layui-input-block"><textarea name="publicity_result" class="layui-textarea" placeholder="非必填项,点击右下角可进行拉伸"></textarea></div></div></div><div class="hr-line-dashed"></div><div class="layui-form-item text-center"><button class="layui-btn" type='submit'>保存</button><button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消吗？" data-close>取消</button></div></form><script type="text/javascript">    form.render();
+</script>

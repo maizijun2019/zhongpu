@@ -1,0 +1,54 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-input-inline">
+                <select id="news_type_Element" name="news_type_id" class="layui-select">
+                    <option value="all">全部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">起始日期</label>
+            <div class="layui-input-inline">
+                <input name="start_date" type="date" value="{:input('start_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">截止日期</label>
+            <div class="layui-input-inline">
+                <input name="end_date" type="date" value="{:input('end_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+        </div>
+    </form>
+
+</fieldset>
+<script>
+    $.ajax({
+        url:"{:url('news/type/typeArray')}",
+        success:function(data){
+            data = JSON.parse(data);
+            var news_type_id = "{:input('news_type_id')}";
+            var select = "";
+            for(var i = 0;i < data.length;i++){
+                select = "";
+                if(news_type_id != "all" && news_type_id == data[i].news_type_id){
+                    select = "selected";
+                }
+                $("#news_type_Element").append("<option " + select + " value='" + data[i].news_type_id + "'>" + data[i].spl + data[i].type_name + "</option>");
+            }
+            form.render();
+        }
+    });
+    form.render();
+</script>

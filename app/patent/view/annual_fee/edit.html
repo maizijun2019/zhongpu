@@ -1,0 +1,65 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">类型</label>
+            <div class="layui-input-block">
+                <select id="project_level_id" name='project_level_id' class='layui-select'></select>
+                <p class="help-block">必选</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">年费</label>
+            <div class="layui-input-block">
+                <input type="number" name="annual_fee" value="{$vo.annual_fee}" required placeholder="请填写年费" class="layui-input">
+                <p class="help-block">必填，请填写年费，保留两位小数</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">年区间</label>
+            <div class="layui-input-block">
+                <input type="number" name="start_year" value="{$vo.start_year}" required placeholder="请填写开始年" class="layui-input">
+                ~
+                <input type="number" name="end_year" value="{$vo.end_year}" required placeholder="请填写结束年" class="layui-input">
+                <p class="help-block">必填，请填写年区间，不能小于0，例如1~3年</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+
+    <input type="hidden" name="patent_annual_fee_id" value="{$vo.patent_annual_fee_id}" required class="layui-input">
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    $.ajax({
+        url:"{:url('patentLevel')}",
+        method:"GET",
+        success:function(data){
+            tree = JSON.parse(data);
+            var project_level_id = "{$vo.project_level_id}";
+            var select  = "";
+            for(var i = 0;i < tree.length;i++){
+                select  = "";
+                if(project_level_id > 0 && project_level_id == tree[i].project_level_id){
+                    select = "selected";
+                }
+                $("#project_level_id").append("<option " + select + " value='" + tree[i].project_level_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].title + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    form.render();
+</script>
+{/block}

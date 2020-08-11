@@ -1,0 +1,201 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">类型</label>
+            <div class="layui-input-block">
+                <select id="project_level_id" name='project_level_id' class='layui-select'></select>
+                <p class="help-block">必选</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">申请号/专利号</label>
+            <div class="layui-input-block">
+                <input name="patent_no" value="{$vo.patent_no|default=''}" required placeholder="请填写申请号/专利号" class="layui-input">
+                <p class="help-block">必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">发明名称</label>
+            <div class="layui-input-block">
+                <input name="patent_name" value="{$vo.patent_name|default=''}" required placeholder="请填写发明名称" class="layui-input">
+                <p class="help-block">必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">申请人</label>
+            <div class="layui-input-block">
+                <input name="apply_people" value="{$vo.apply_people|default=''}" required placeholder="请填写申请人" class="layui-input">
+                <p class="help-block">必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">申请日</label>
+            <div class="layui-input-block">
+                <input type="date" name="apply_date" value="{$vo.apply_date_text|default=''}" required placeholder="请填写申请日" class="layui-input">
+                <p class="help-block">必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">缴费截止日期</label>
+            <div class="layui-input-block">
+                <input type="date" name="pay_end_date" value="{$vo.pay_end_date_text|default=''}" required placeholder="请填写缴费截止日期" class="layui-input">
+                <p class="help-block">必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">授权日</label>
+            <div class="layui-input-block">
+                <input type="date" name="warrant_date" value="{$vo.warrant_date_text|default=''}" required placeholder="请填写授权日" class="layui-input">
+                <p class="help-block">必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">减费比例</label>
+            <div class="layui-input-block">
+                <select id="reduce" name="reduce" class="layui-select">
+                    <option value="0">无减缓</option>
+                    <option value="70">减缓70%</option>
+                    <option value="85">减缓85%</option>
+                </select>
+                <p class="help-block">必选</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">文件上传</label>
+            <div class="layui-inline">
+                <button type="button" class="layui-btn" id="uploadFile">
+                    <i class="layui-icon">&#xe67c;</i>文件上传
+                </button>
+                <div class="layui-upload-list" id="upload_preview">
+                    <table class="layui-table">
+                        <thead>
+                        <tr><th>文件名</th>
+                            <th>预览(仅支持图片预览)</th>
+                            <th>操作</th>
+                        </tr></thead>
+                        <tbody id="imgList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    {notempty name='vo.patent_id'}<input type='hidden' value='{$vo.patent_id}' name='patent_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    $.ajax({
+        url:"{:url('patentLevel')}",
+        method:"GET",
+        success:function(data){
+            tree = JSON.parse(data);
+            var project_level_id = "{$vo.project_level_id|default=0}";
+            var select = "";
+            for(var i = 0;i < tree.length;i++){
+                select = "";
+                if(project_level_id > 0 && project_level_id == tree[i].project_level_id){
+                    select = "selected";
+                }
+                $("#project_level_id").append("<option " + select + " value='" + tree[i].project_level_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].title + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    var reduce = "{$vo.reduce|default=0}";
+    if(reduce > 0){
+        var reduceElement = document.getElementById("reduce");
+        for(var i = 0;i < reduceElement.length;i++){
+            if(reduce == reduceElement[i].value){
+                reduceElement[i].selected = true;
+            }
+        }
+    }
+
+    var pay = "{$vo.pay|default='N'}";
+    if(pay == 'Y'){
+        var payEdit = document.getElementById("payEdit");
+        for(var i = 0;i < payEdit.length;i++){
+            if(pay == payEdit[i].value){
+                payEdit[i].selected = true;
+            }
+        }
+    }
+
+    var img_file_path = {:json_encode($vo.img_file_path)};
+    for(var i = 0;i < img_file_path.length;i++){
+        $("#imgList").append("<tr>" +
+            "<td>" + img_file_path[i].preview_name + "</td>" +
+            "<td><img alt='预览图' width='40px' height='40px' src='"+ img_file_path[i].path +"' class='text-top margin-right-10' data-tips-image/></td>" +
+            "<td>" +
+            "<a class='layui-btn layui-btn-xs' target='_blank' data-title='网页预览' href='" + img_file_path[i].path + "'>网页预览</a>" +
+            "<a class='layui-btn layui-btn-xs' target='_blank' data-title='下载' download href='" + img_file_path[i].path + "'>下载</a>" +
+            "<button type='button' onclick='deleteImg(this)' class='layui-btn layui-btn-xs layui-btn-danger demo-delete'>删除</button>" +
+            "</td>" +
+            "<input type='hidden' name='img_file_path[" + $("#imgList").children().length + "][name]' value='" + img_file_path[i].name + "'>" +
+            "<input type='hidden' name='img_file_path[" + $("#imgList").children().length + "][path]' value='" + img_file_path[i].path + "'>" +
+            "</tr>");
+    }
+
+    layui.use('upload', function(){
+        var upload = layui.upload;
+
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#uploadFile' //绑定元素
+            ,url: 'api/upload/index' //上传接口
+            ,multiple:true
+            ,accept:"file"
+            ,done: function(res){
+                if (res.code == 1) {
+                    layer.msg("上传成功");
+                    $("#imgList").append("<tr>" +
+                        "<td>" + res.preview_name + "</td>" +
+                        "<td><img alt='预览图' width='40px' height='40px' src='"+ res.path +"' class='text-top margin-right-10' data-tips-image/></td>" +
+                        "<td>" +
+                        "<a class='layui-btn layui-btn-xs' target='_blank' data-title='网页预览' href='" + res.path + "'>网页预览</a>" +
+                        "<a class='layui-btn layui-btn-xs' target='_blank' data-title='下载' download href='" + res.path + "'>下载</a>" +
+                        "<button type='button' onclick='deleteImg(this)' class='layui-btn layui-btn-xs layui-btn-danger demo-delete'>删除</button>" +
+                        "</td>" +
+                        "<input type='hidden' name='img_file_path[" + $("#imgList").children().length + "][name]' value='" + res.name + "'>" +
+                        "<input type='hidden' name='img_file_path[" + $("#imgList").children().length + "][path]' value='" + res.path + "'>" +
+                        "</tr>");
+                    form.render();
+                }
+            },error: function(){
+                //请求异常回调
+            }
+        });
+    });
+
+    function deleteImg(e){
+        e.parentNode.parentNode.remove();
+        var tr = $("#imgList").children("tr");
+        for(var i = 0;i < tr.length;i++){
+            var input = $(tr[i]).find("input");
+            $(input[0]).attr("name","img_file_path[" + i + "][name]");
+            $(input[1]).attr("name","img_file_path[" + i + "][path]");
+        }
+    }
+    form.render();
+</script>
+{/block}

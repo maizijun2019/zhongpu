@@ -1,0 +1,56 @@
+{extend name='main'}
+
+{block name="button"}
+
+{if auth("add")}
+<button data-modal='{:url("add")}' data-title="添加分类" class='layui-btn layui-btn-sm layui-btn-primary'>添加分类</button>
+{/if}
+
+{/block}
+
+{block name="content"}
+<div class="think-box-shadow">
+    {include file='level_type/index_search'}
+    {empty name='list'}
+    <blockquote class="layui-elem-quote">没 有 记 录 哦！</blockquote>
+    {else}
+    <table class="layui-table" lay-skin="line">
+        <thead>
+        <tr>
+            <th class='list-table-sort-td'>
+                <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+            </th>
+            <th>分类名称</th>
+            <th>归属流程</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            {foreach $list as $key=>$vo}
+            <tr data-dbclick>
+                <td></td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.name|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.process_name|default=''|raw}</span>
+                    </div>
+                </td>
+                <td>
+                    {if auth("edit")}
+                    <a data-dbclick class="layui-btn layui-btn-xs" data-title="编辑等级" data-modal='{:url("edit")}?project_level_type_id={$vo.project_level_type_id}'>编 辑</a>
+                    {/if}
+                    {if auth("remove")}
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" data-confirm="确定要删除吗?" data-action="{:url('remove')}" data-value="project_level_type_id#{$vo.project_level_type_id}" data-csrf="{:systoken('remove')}">删 除</a>
+                    {/if}
+                </td>
+            </tr>
+            {/foreach}
+        </tbody>
+    </table>
+    {/empty}
+</div>
+{/block}

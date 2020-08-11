@@ -1,0 +1,77 @@
+<!-- 配置文件 -->
+<script type="text/javascript" src="/static/baidu_text/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/static/baidu_text/ueditor.all.js"></script>
+<!-- 语言文件 -->
+<script type="text/javascript" charset="utf-8" src="/static/baidu_text/lang/zh-cn/zh-cn.js"></script>
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">标题</label>
+            <div class="layui-input-block">
+                <input name="title" value="{$vo.title|default=''}" class="layui-input" required placeholder="请填写标题">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">分类</label>
+            <div class="layui-input-block">
+                <select id="news_type_form" name="news_type_id" class="layui-select">
+                    <option value="0">请选择分类</option>
+                </select>
+            </div>
+        </div>
+        <style>
+            .layui-form-select dl{
+                z-index:999999999!important;
+            }
+        </style>
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">内容</label>
+            <div class="layui-input-block">
+                <!-- 加载编辑器的容器 -->
+                <script id="content_text" name="content" type="text/plain">{notempty name = 'vo.content'}{:htmlspecialchars_decode($vo.content)}{/notempty}</script>
+                <!-- 在script中初始化 -->
+                <!-- 实例化编辑器 -->
+                <script type="text/javascript">
+                    var ue = UE.getEditor('content_text',{
+                        autoHeightEnabled:false,
+                        serverUrl:"/static/php/controller.php?action=config"//这里是上传图片后端处理文件地址（自行替换），如果不使用图片上传，则不需要配置
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    {notempty name='vo.news_id'}<input type='hidden' value='{$vo.news_id}' name='news_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    $.ajax({
+        url:"{:url('news/type/typeArray')}",
+        success:function(data){
+            data = JSON.parse(data);
+            var news_type_id = "{$vo.news_type_id|default=0}";
+            var select = "";
+            for(var i = 0;i < data.length;i++){
+                select = "";
+                if(news_type_id != "all" && news_type_id == data[i].news_type_id){
+                    select = "selected";
+                }
+                $("#news_type_form").append("<option " + select + " value='" + data[i].news_type_id + "'>" + data[i].spl + data[i].type_name + "</option>");
+            }
+            form.render();
+        }
+    });
+    form.render();
+</script>
+{/block}

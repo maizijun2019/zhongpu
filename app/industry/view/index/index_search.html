@@ -1,0 +1,40 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">行业类型</label>
+            <div class="layui-input-inline">
+                <select id="industryArray" name="industry_id" class="layui-select">
+                    <option value="all">全部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+        </div>
+    </form>
+
+</fieldset>
+<script type="text/javascript">
+    $.ajax({
+        url:"{:url('industryArray')}",
+        method:"GET",
+        success:function(data){
+            tree = JSON.parse(data);
+            var select = "";
+            var industry_id = "{:input('industry_id')}";
+            for(var i = 0;i < tree.length;i++){
+                select = "";
+                if(industry_id == tree[i].industry_id){
+                    select = "selected";
+                }
+                $("#industryArray").append("<option " + select + " value='" + tree[i].industry_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].industry_name + "</option>");
+            }
+            form.render();
+        }
+    })
+</script>

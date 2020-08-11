@@ -1,0 +1,61 @@
+{extend name='main'}
+
+{block name="button"}
+<button data-modal='{:url("readerAll")}' data-title="全部标为已读" class='layui-btn layui-btn-sm layui-btn-primary'>全部标为已读</button>
+{/block}
+
+{block name="content"}
+<div class="think-box-shadow">
+    {empty name='list'}
+    <blockquote class="layui-elem-quote">没 有 记 录 哦！</blockquote>
+    {else}
+    <table class="layui-table" lay-skin="line">
+        <thead>
+        <tr>
+            <th class='list-table-sort-td'>
+                <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+            </th>
+            <th></th>
+            <th>标题</th>
+            <th>时间</th>
+            <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach $list as $key=>$vo}
+        <tr data-dbclick>
+            <td class='list-table-sort-td'></td>
+            <td class='text-left nowrap'>
+                <div id="reader_{$vo.message_box_id}" class="inline-block sub-span-blue">
+                    <span id="reader_span_{$vo.message_box_id}" class="fa fa-envelope-o"></span>
+                </div>
+            </td>
+            <td class='text-left nowrap'>
+                <div id="title_{$vo.message_box_id}" class="inline-block sub-span-blue">
+                    <span>{$vo.title|default=''|raw}</span>
+                </div>
+            </td>
+            <td class='text-left nowrap'>
+                <div id="create_time_text_{$vo.message_box_id}" class="inline-block sub-span-blue">
+                    <span>{$vo.create_time_text|default=''|raw}</span>
+                </div>
+            </td>
+            <td class='text-center nowrap notselect'>
+                <a data-dbclick onclick="reader('{$vo.message_box_id}')" class="layui-btn layui-btn-xs" data-title="详情" data-modal='{:url("info")}?message_box_id={$vo.message_box_id}'>详 情</a>
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {/empty}
+</div>
+<script>
+    function reader(message_box_id){
+        $("#reader_" + message_box_id).removeClass("sub-span-blue");
+        $("#title_" + message_box_id).removeClass("sub-span-blue");
+        $("#create_time_text_" + message_box_id).removeClass("sub-span-blue");
+        $("#reader_span_" + message_box_id).removeClass("fa fa-envelope-o");
+        $("#reader_span_" + message_box_id).addClass("fa fa-envelope-open-o");
+    }
+</script>
+{/block}

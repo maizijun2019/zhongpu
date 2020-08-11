@@ -1,0 +1,45 @@
+{extend name='main'}
+
+{block name="content"}
+<div class="layui-tab layui-tab-card think-bg-white">
+    <div class="layui-tab-content think-box-shadow">
+        <table class="layui-table margin-top-10" lay-skin="line">
+            {notempty name='files'}
+            <thead>
+            <tr>
+                <th class='list-table-sort-td'>
+                    <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+                </th>
+                <th class='text-left nowrap'>文件名</th>
+                <th class='text-left nowrap'>预览(仅支持图片预览)</th>
+                <th class='text-left nowrap'>操作</th>
+            </tr>
+            </thead>
+            {/notempty}
+            <tbody>
+            {foreach $files as $key=>$vo}
+            <tr data-dbclick>
+                <td></td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.name|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <img alt='预览图' width='40px' height='40px' src="{$vo.path|default=''|raw}" class='text-top margin-right-10' data-tips-image/>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <a data-dbclick class="layui-btn layui-btn-xs" target='_blank' data-title="网页预览" data-modal="{$vo.path|default=''|raw}">网页预览</a>
+                    <a data-dbclick class="layui-btn layui-btn-xs" target='_blank' data-title="下载" download data-modal="{$vo.path|default=''|raw}">下载</a>
+                </td>
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+
+        {empty name='files'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+    </div>
+</div>
+{/block}

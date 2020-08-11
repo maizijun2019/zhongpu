@@ -1,0 +1,54 @@
+{extend name='main'}
+
+{block name="button"}
+
+{if auth("add")}
+<button data-modal='{:url("add")}' data-title="添加流程" class='layui-btn layui-btn-sm layui-btn-primary'>添加流程</button>
+{/if}
+
+{/block}
+
+{block name="content"}
+<div class="layui-tab layui-tab-card think-bg-white">
+    <div class="layui-tab-content think-box-shadow">
+        <table class="layui-table margin-top-10" lay-skin="line">
+            {notempty name='list'}
+            <thead>
+            <tr>
+                <th class='list-table-sort-td'>
+                    <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+                </th>
+                <th class='text-left nowrap'>简称</th>
+                <th class='text-left nowrap'>描述</th>
+                <th class='text-left nowrap'>操作</th>
+            </tr>
+            </thead>
+            {/notempty}
+            <tbody>
+            {foreach $list as $key=>$vo}
+            <tr data-dbclick>
+                <td></td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.name|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <textarea readonly placeholder="什么也没有..." class="layui-text">{$vo.describe|default=''|raw}</textarea>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    {if auth("remove")}
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" data-confirm="确定要删除吗?" data-action="{:url('remove')}" data-value="orders_process_id#{$vo.orders_process_id}" data-csrf="{:systoken('remove')}">删 除</a>
+                    {/if}
+                </td>
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+
+        {empty name='list'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+    </div>
+</div>
+{/block}

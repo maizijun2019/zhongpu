@@ -1,0 +1,49 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">上级等级</label>
+            <div class="layui-input-block">
+                <select id="pid" name='pid' class='layui-select'>
+                    <option value="0">顶级等级</option>
+                </select>
+                <p class="help-block">必选，请选择上级或顶级</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">等级名称</label>
+            <div class="layui-input-block">
+                <input name="title" value='{$vo.title|default=""}' required placeholder="请输入等级名称" class="layui-input">
+                <p class="help-block">必填，请填写等级名称（如：专利），建议字符不要太长</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    {notempty name='vo.project_level_id'}<input type='hidden' value='{$vo.project_level_id}' name='project_level_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    var tree = {:json_encode($tree)};
+    var pid = "{$pid}";
+    var select = "";
+    for(var i = 0;i < tree.length;i++){
+        select = "";
+        if(pid > 0 && pid == tree[i].project_level_id){
+            select = "selected";
+        }
+        $("#pid").append("<option " + select + " value='" + tree[i].project_level_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].title + "</option>");
+    }
+    form.render();
+</script>
+{/block}

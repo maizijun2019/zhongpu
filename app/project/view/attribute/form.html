@@ -1,0 +1,128 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">属性名称</label>
+            <div class="layui-input-block">
+                <input name="attribute_name" value='{$vo.attribute_name|default=""}' required placeholder="请输入属性名称" class="layui-input">
+                <p class="help-block">必填，请填写属性名称（如：年收入），建议字符不要太长</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">单位</label>
+            <div class="layui-input-block">
+                <input name="company" value='{$vo.company|default=""}' required placeholder="请输入单位" class="layui-input">
+                <p class="help-block">必填，请填写单位</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">匹配条件</label>
+            <div class="layui-input-block">
+                <select id="condition" name='condition' class='layui-select'>
+                    <option value="==">等于</option>
+                    <option value=">">大于</option>
+                    <option value="<">小于</option>
+                    <option value=">=">大于等于</option>
+                    <option value="<=">小于等于</option>
+                </select>
+                <p class="help-block">必选，请选择匹配条件</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">用户填写</label>
+            <div class="layui-input-block">
+                <select id="display" name='display' class='layui-select' required>
+                    <option value="N">否</option>
+                    <option value="Y">是</option>
+                </select>
+                <p class="help-block">必选，选择是，用户匹配条件选项中会出现此项</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">是否必填</label>
+            <div class="layui-input-block">
+                <select id="required" name='required' class='layui-select' required>
+                    <option value="N">否</option>
+                    <option value="Y">是</option>
+                </select>
+                <p class="help-block">必选，选择是，用户填写匹配条件时此项为必填</p>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">描述</label>
+            <div class="layui-input-block">
+                <textarea name="remarks" placeholder="点击右下角进行拉伸" class="layui-textarea">{$vo.remarks|default=""}</textarea>
+                <p class="help-block">选填</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    {notempty name='vo.project_attribute_id'}<input type='hidden' value='{$vo.project_attribute_id}' name='project_attribute_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    var condition = '{$vo.condition|default=""}';
+    if(condition != ""){
+        switch (condition) {
+            case "&gt;":
+                condition = ">";
+                break;
+            case "&lt;":
+                condition = "<";
+                break;
+            case "&gt;=":
+                condition = ">=";
+                break;
+            case "&lt;=":
+                condition = "<=";
+                break;
+        }
+        var conditionElement = document.getElementById("condition");
+        for(var i = 0;i < conditionElement.length;i++){
+            if(condition == conditionElement[i].value){
+                conditionElement[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    var display = "{$vo.display|default=''}";
+    if(display != ""){
+        var displayElement = document.getElementById("display");
+        for(var i = 0;i < displayElement.length;i++){
+            if(display == displayElement[i].value){
+                displayElement[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    var required = "{$vo.required|default=''}";
+    if(required != ""){
+        var requiredElement = document.getElementById("required");
+        for(var i = 0;i < requiredElement.length;i++){
+            if(required == requiredElement[i].value){
+                requiredElement[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    form.render();
+</script>
+{/block}

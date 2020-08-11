@@ -1,0 +1,57 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">文件名</label>
+            <div class="layui-input-block">
+                <input name="file_name" value="{$vo.file_name}" placeholder="选填 默认原名" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类</label>
+            <div class="layui-input-block">
+                <select id="type_id_select" name="type_id" required class="layui-select"></select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-block">
+                <input name="remarks" value="{$vo.remarks}" placeholder="选填" class="layui-input">
+            </div>
+        </div>
+
+    </div>
+    <input type='hidden' value='{$vo.public_database_id}' name='public_database_id'>
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+<script>
+    $.ajax({
+        url:"{:url('typeList')}",
+        method:"GET",
+        success:function(data){
+            data = JSON.parse(data);
+            var type_idElement = document.getElementById("type_id_select");
+            var value = "{$vo.type_id}";
+            for(var i = 0;i < data.length;i++){
+                var option = document.createElement("option");
+                option.setAttribute("value",data[i]["type_id"]);
+                option.innerText = data[i]["type"];
+                if(value == data[i]["type_id"]){
+                    option.selected = true;
+                }
+                type_idElement.append(option);
+            }
+            form.render();
+        }
+    });
+    form.render();
+</script>

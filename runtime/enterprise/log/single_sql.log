@@ -1,0 +1,22 @@
+[2020-07-23 17:23:43][sql] CONNECT:[ UseTime:0.001936s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:43][sql] SHOW FULL COLUMNS FROM `zp_enterprise` [ RunTime:0.002323s ]
+[2020-07-23 17:23:43][sql] SELECT COUNT(*) AS think_count FROM `zp_enterprise` `a` INNER JOIN `zp_consumer` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000596s ]
+[2020-07-23 17:23:43][sql] SELECT `a`.`enterprise_id`,`b`.`username`,`a`.`enterprise_name`,`a`.`contacts`,`a`.`phone`,`a`.`fixed_telephone`,`a`.`industry_id`,`a`.`province_region_id`,`a`.`city_region_id`,`a`.`area_region_id`,`a`.`address` FROM `zp_enterprise` `a` INNER JOIN `zp_consumer` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`enterprise_id` DESC LIMIT 0,20 [ RunTime:0.000391s ]
+[2020-07-23 17:23:43][sql] SHOW FULL COLUMNS FROM `zp_industry` [ RunTime:0.001574s ]
+[2020-07-23 17:23:43][sql] SELECT `industry_id`,`industry_name` FROM `zp_industry` WHERE  `industry_id` IN (10,2,6) LIMIT 3 [ RunTime:0.006088s ]
+[2020-07-23 17:23:43][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001866s ]
+[2020-07-23 17:23:43][sql] SELECT `region_id`,`name`,`level` FROM `zp_region` WHERE  `region_id` IN (466,76,8,1,2,3,933,960,963) LIMIT 9 [ RunTime:0.000698s ]
+[2020-07-23 17:23:43][sql] CONNECT:[ UseTime:0.012278s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:43][sql] SHOW FULL COLUMNS FROM `zp_industry` [ RunTime:0.001722s ]
+[2020-07-23 17:23:43][sql] SELECT `industry_id`,`pid`,`industry_name` FROM `zp_industry` ORDER BY `industry_id` ASC [ RunTime:0.000629s ]
+[2020-07-23 17:23:52][sql] CONNECT:[ UseTime:0.001370s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:52][sql] SHOW FULL COLUMNS FROM `zp_enterprise` [ RunTime:0.002737s ]
+[2020-07-23 17:23:52][sql] SELECT COUNT(*) AS think_count FROM `zp_enterprise` `a` INNER JOIN `zp_consumer` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000957s ]
+[2020-07-23 17:23:52][sql] SELECT `a`.`enterprise_id`,`b`.`username`,`a`.`enterprise_name`,`a`.`contacts`,`a`.`phone`,`a`.`fixed_telephone`,`a`.`industry_id`,`a`.`province_region_id`,`a`.`city_region_id`,`a`.`area_region_id`,`a`.`address` FROM `zp_enterprise` `a` INNER JOIN `zp_consumer` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`enterprise_id` DESC LIMIT 0,20 [ RunTime:0.000830s ]
+[2020-07-23 17:23:52][sql] SHOW FULL COLUMNS FROM `zp_industry` [ RunTime:0.001592s ]
+[2020-07-23 17:23:52][sql] SELECT `industry_id`,`industry_name` FROM `zp_industry` WHERE  `industry_id` IN (10,2,6) LIMIT 3 [ RunTime:0.000751s ]
+[2020-07-23 17:23:52][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001522s ]
+[2020-07-23 17:23:52][sql] SELECT `region_id`,`name`,`level` FROM `zp_region` WHERE  `region_id` IN (466,76,8,1,2,3,933,960,963) LIMIT 9 [ RunTime:0.000726s ]
+[2020-07-23 17:23:52][sql] CONNECT:[ UseTime:0.011151s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:52][sql] SHOW FULL COLUMNS FROM `zp_industry` [ RunTime:0.001839s ]
+[2020-07-23 17:23:52][sql] SELECT `industry_id`,`pid`,`industry_name` FROM `zp_industry` ORDER BY `industry_id` ASC [ RunTime:0.000658s ]

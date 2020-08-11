@@ -1,0 +1,118 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+        <div class="layui-form-item">
+            <label class="layui-form-label">可选属性</label>
+            <div class="layui-input-block">
+                <select id="attributeArray" class='layui-select'/>
+                <button class="layui-btn" onclick="addAttribute()" type='button'>添加</button>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">已有属性</label>
+            <div class="layui-inline">
+                <div class="layui-upload-list" id="upload_preview">
+                    <table class="layui-table">
+                        <thead>
+                        <tr><th>属性名称</th>
+                            <th>条件</th>
+                            <th>值</th>
+                            <th>单位</th>
+                            <th>操作</th>
+                        </tr></thead>
+                        <tbody id="attributes"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    {notempty name='vo.project_level_id'}<input type='hidden' value='{$vo.project_level_id}' name='project_level_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    var attribute = JSON.parse('{:json_encode($vo.attribute)}');
+
+    $.ajax({
+        url:"{:url('api/query/projectAttribute')}",
+        success:function(data){
+            data = JSON.parse(data);
+            for(var i = 0;i < data.length;i++){
+                var key = "project_attribute_id_" + data[i].project_attribute_id;
+                var condition_text = "";
+                switch (data[i].condition) {
+                    case "==":
+                        condition_text = "等于";
+                        break;
+                    case ">":
+                        condition_text = "大于";
+                        break;
+                    case "<":
+                        condition_text = "小于";
+                        break;
+                    case ">=":
+                        condition_text = "大于等于";
+                        break;
+                    case "<=":
+                        condition_text = "小于等于";
+                        break;
+                    default:
+                        continue;
+                }
+                $("#attributeArray").append("<option condition='" + data[i].condition + "' company='" + data[i].company + "' value='" + key + "'>" + data[i].attribute_name + " : " + condition_text + " ? " + data[i].company + "</option>");
+                if(attribute.hasOwnProperty(key)){
+                    $("#attributes").append("<tr id='" + key + "'>" +
+                        "<td>" + data[i].attribute_name + "</td>" +
+                        "<td>" + data[i].condition + "</td>" +
+                        "<td><input type='number' name='attribute[" + key + "]' value='" + attribute[key] + "' required/></td>" +
+                        "<td>" + data[i].company + "</td>" +
+                        "<td>" +
+                        "<button type='button' onclick='deleteImg(this)' class='layui-btn layui-btn-xs layui-btn-danger demo-delete'>删除</button>" +
+                        "</td>" +
+                        "</tr>");
+                }
+            }
+            form.render();
+        },
+        error:function(){
+            layer.msg("网络错误,请检查网络");
+        }
+    });
+
+    function addAttribute(){
+        var project_attribute_id = $("#attributeArray option:selected").val();
+        var attribute_name = $("#attributeArray option:selected").text();
+        var company = $("#attributeArray option:selected").attr("company");
+        var condition = $("#attributeArray option:selected").attr("condition");
+        if(document.getElementById(project_attribute_id)){
+            layer.msg("该属性已添加过");
+            return;
+        }
+        $("#attributes").append("<tr id='" + project_attribute_id + "'>" +
+            "<td>" + attribute_name + "</td>" +
+            "<td>" + condition + "</td>" +
+            "<td><input type='number' name='attribute[" + project_attribute_id + "]' value='0' required/></td>" +
+            "<td>" + company + "</td>" +
+            "<td>" +
+            "<button type='button' onclick='deleteImg(this)' class='layui-btn layui-btn-xs layui-btn-danger demo-delete'>删除</button>" +
+            "</td>" +
+            "</tr>");
+        form.render();
+    }
+
+    function deleteImg(e){
+        e.parentNode.parentNode.remove();
+    }
+
+    form.render();
+</script>
+{/block}

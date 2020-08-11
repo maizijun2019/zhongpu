@@ -1,0 +1,124 @@
+{extend name='main'}
+
+{block name="button"}
+
+{if auth("add")}
+<button data-modal='{:url("add")}' data-title="添加专利" class='layui-btn layui-btn-sm layui-btn-primary'>添加专利</button>
+{/if}
+
+{/block}
+
+{block name="content"}
+<div class="layui-tab layui-tab-card think-bg-white">
+    <div class="layui-tab-content think-box-shadow">
+        {include file='index/index_search'}
+        <table class="layui-table margin-top-10" lay-skin="line">
+            {notempty name='list'}
+            <thead>
+            <tr>
+                <th class='list-table-sort-td'>
+                    <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+                </th>
+                <th class='text-left nowrap'>类型</th>
+                <th class='text-left nowrap'>专利号</th>
+                <th class='text-left nowrap'>专利名称</th>
+                <th class='text-left nowrap'>申请人</th>
+                <th class='text-left nowrap'>申请日</th>
+                <th class='text-left nowrap'>授权日</th>
+                <th class='text-left nowrap'>缴费截止日期</th>
+                <th class='text-left nowrap'>费减比例</th>
+                <th class='text-left nowrap'>费用种类</th>
+                <th class='text-left nowrap'>年费金额</th>
+                <th class='text-left nowrap'>费减后年费金额</th>
+                <th class='text-left nowrap'>是否缴费</th>
+                <th class='text-left nowrap'>操作</th>
+            </tr>
+            </thead>
+            {/notempty}
+            <tbody>
+            {foreach $list as $key=>$vo}
+            <tr data-dbclick>
+                <td></td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.title|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.patent_no|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.patent_name|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.apply_people|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.apply_date_text|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.warrant_date_text|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block {$vo.pay_end_date_class|default='sub-span-blue'|raw}">
+                        <span>{$vo.pay_end_date_text|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.reduce|default='0'|raw}%</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>第{$vo.annual_type|default=''|raw}年年费</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        ￥<span>{$vo.annual_fee|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        ￥<span>{$vo.reduce_annual_fee|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block {$vo.pay_end_date_class|default='sub-span-blue'|raw}">
+                        <span>{$vo.pay_text|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    {if auth("files")}
+                    <!--<a data-dbclick class="layui-btn layui-btn-xs" data-title="文件列表" data-modal='{:url("files")}?patent_id={$vo.patent_id}'>文件列表</a>-->
+                    {/if}
+                    {if auth("pay")}
+                    <a class="layui-btn layui-btn-xs" data-title="缴费" data-modal='{:url("pay")}?patent_id={$vo.patent_id}'>缴 费</a>
+                    {/if}
+                    {if auth("edit")}
+                    <a data-dbclick class="layui-btn layui-btn-xs" data-title="编辑" data-modal='{:url("edit")}?patent_id={$vo.patent_id}'>编 辑</a>
+                    {/if}
+                    {if auth("remove")}
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" data-confirm="确定要删除吗?" data-action="{:url('remove')}" data-value="patent_id#{$vo.patent_id}" data-csrf="{:systoken('remove')}">删 除</a>
+                    {/if}
+                </td>
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+
+        {empty name='list'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+    </div>
+</div>
+{/block}

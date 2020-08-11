@@ -1,0 +1,363 @@
+[2020-07-23 13:31:25][sql] CONNECT:[ UseTime:0.001180s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:32:01][sql] CONNECT:[ UseTime:0.001014s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:32:14][sql] CONNECT:[ UseTime:0.001280s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:32:24][sql] CONNECT:[ UseTime:0.002671s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:33:18][sql] CONNECT:[ UseTime:0.001008s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:36:20][sql] CONNECT:[ UseTime:0.001195s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:03][sql] CONNECT:[ UseTime:0.001979s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:03][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003672s ]
+[2020-07-23 17:23:03][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000589s ]
+[2020-07-23 17:23:59][sql] CONNECT:[ UseTime:0.002219s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:59][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001993s ]
+[2020-07-23 17:23:59][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.001168s ]
+[2020-07-23 17:24:52][sql] CONNECT:[ UseTime:0.001748s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:24:52][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002844s ]
+[2020-07-23 17:24:52][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000433s ]
+[2020-07-24 09:03:17][sql] CONNECT:[ UseTime:0.001154s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:03:17][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001687s ]
+[2020-07-24 09:03:17][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.000547s ]
+[2020-07-24 09:08:04][sql] CONNECT:[ UseTime:0.002451s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:08:04][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002698s ]
+[2020-07-24 09:08:04][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.001295s ]
+[2020-07-24 09:12:28][sql] CONNECT:[ UseTime:0.003933s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:12:28][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002431s ]
+[2020-07-24 09:12:28][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000400s ]
+[2020-07-24 09:22:03][sql] CONNECT:[ UseTime:0.011398s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:22:03][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002651s ]
+[2020-07-24 09:22:03][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000942s ]
+[2020-07-24 09:22:13][sql] CONNECT:[ UseTime:0.002624s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:22:13][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003320s ]
+[2020-07-24 09:22:13][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000468s ]
+[2020-07-24 10:38:14][sql] CONNECT:[ UseTime:0.001349s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 10:38:14][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001870s ]
+[2020-07-24 10:38:14][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000426s ]
+[2020-07-24 10:38:39][sql] CONNECT:[ UseTime:0.002114s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 10:38:39][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002126s ]
+[2020-07-24 10:38:39][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000461s ]
+[2020-07-24 13:03:00][sql] CONNECT:[ UseTime:0.001646s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:03:00][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001727s ]
+[2020-07-24 13:03:00][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000378s ]
+[2020-07-24 13:18:50][sql] CONNECT:[ UseTime:0.001454s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:18:50][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002402s ]
+[2020-07-24 13:18:50][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000431s ]
+[2020-07-24 13:20:21][sql] CONNECT:[ UseTime:0.001247s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:20:21][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003019s ]
+[2020-07-24 13:20:21][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000404s ]
+[2020-07-24 13:21:15][sql] CONNECT:[ UseTime:0.001269s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:21:15][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002649s ]
+[2020-07-24 13:21:15][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000403s ]
+[2020-07-24 13:53:35][sql] CONNECT:[ UseTime:0.002896s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:53:35][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002144s ]
+[2020-07-24 13:53:35][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000404s ]
+[2020-07-24 13:54:10][sql] CONNECT:[ UseTime:0.001292s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:54:10][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001730s ]
+[2020-07-24 13:54:10][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000318s ]
+[2020-07-24 14:35:58][sql] CONNECT:[ UseTime:0.001603s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 14:35:58][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002246s ]
+[2020-07-24 14:35:58][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000674s ]
+[2020-07-24 15:12:15][sql] CONNECT:[ UseTime:0.001456s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 15:12:15][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003172s ]
+[2020-07-24 15:12:15][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000517s ]
+[2020-07-24 17:49:58][sql] CONNECT:[ UseTime:0.002117s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 17:49:58][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002722s ]
+[2020-07-24 17:49:58][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000463s ]
+[2020-07-25 10:52:15][sql] CONNECT:[ UseTime:0.012021s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 10:52:15][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003521s ]
+[2020-07-25 10:52:15][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000343s ]
+[2020-07-25 11:17:54][sql] CONNECT:[ UseTime:0.001266s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 11:17:54][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003379s ]
+[2020-07-25 11:17:54][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000392s ]
+[2020-07-25 13:29:44][sql] CONNECT:[ UseTime:0.001542s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 13:29:44][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002312s ]
+[2020-07-25 13:29:44][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000834s ]
+[2020-07-25 13:32:45][sql] CONNECT:[ UseTime:0.002128s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 13:32:45][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002318s ]
+[2020-07-25 13:32:45][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000604s ]
+[2020-08-03 11:30:04][sql] CONNECT:[ UseTime:0.001648s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 11:30:04][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002754s ]
+[2020-08-03 11:30:04][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.001399s ]
+[2020-08-03 13:33:07][sql] CONNECT:[ UseTime:0.001270s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:33:07][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001935s ]
+[2020-08-03 13:33:07][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000491s ]
+[2020-08-03 13:34:41][sql] CONNECT:[ UseTime:0.011313s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:34:41][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001770s ]
+[2020-08-03 13:34:41][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000503s ]
+[2020-08-03 13:35:31][sql] CONNECT:[ UseTime:0.001452s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:35:31][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003426s ]
+[2020-08-03 13:35:31][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000374s ]
+[2020-08-03 13:38:29][sql] CONNECT:[ UseTime:0.001316s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:38:29][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001795s ]
+[2020-08-03 13:38:29][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000423s ]
+[2020-08-03 13:39:31][sql] CONNECT:[ UseTime:0.012070s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:39:31][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002471s ]
+[2020-08-03 13:39:31][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000389s ]
+[2020-08-03 13:43:14][sql] CONNECT:[ UseTime:0.002513s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:43:14][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002744s ]
+[2020-08-03 13:43:14][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000921s ]
+[2020-08-03 13:45:23][sql] CONNECT:[ UseTime:0.001333s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:45:23][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001697s ]
+[2020-08-03 13:45:23][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000428s ]
+[2020-08-03 13:55:53][sql] CONNECT:[ UseTime:0.001396s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:55:53][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002025s ]
+[2020-08-03 13:55:53][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000434s ]
+[2020-08-03 13:57:37][sql] CONNECT:[ UseTime:0.011995s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-03 13:57:37][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001591s ]
+[2020-08-03 13:57:37][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000287s ]
+[2020-08-05 10:20:46][sql] CONNECT:[ UseTime:0.002321s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 10:20:46][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002767s ]
+[2020-08-05 10:20:46][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000378s ]
+[2020-08-05 10:20:51][sql] CONNECT:[ UseTime:0.001504s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 10:20:51][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003018s ]
+[2020-08-05 10:20:51][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000441s ]
+[2020-08-05 12:28:15][sql] CONNECT:[ UseTime:0.001393s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 12:28:15][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001764s ]
+[2020-08-05 12:28:15][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000421s ]
+[2020-08-05 12:28:18][sql] CONNECT:[ UseTime:0.001235s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 12:28:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001834s ]
+[2020-08-05 12:28:18][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000353s ]
+[2020-08-05 14:57:41][sql] CONNECT:[ UseTime:0.011082s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 14:57:41][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001809s ]
+[2020-08-05 14:57:41][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000437s ]
+[2020-08-05 17:21:47][sql] CONNECT:[ UseTime:0.011753s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 17:21:47][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003466s ]
+[2020-08-05 17:21:47][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000412s ]
+[2020-08-05 17:21:54][sql] CONNECT:[ UseTime:0.002029s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 17:21:54][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002848s ]
+[2020-08-05 17:21:54][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000443s ]
+[2020-08-05 17:22:00][sql] CONNECT:[ UseTime:0.010635s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-05 17:22:00][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001780s ]
+[2020-08-05 17:22:00][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000405s ]
+[2020-08-06 12:30:11][sql] CONNECT:[ UseTime:0.001551s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 12:30:11][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003618s ]
+[2020-08-06 12:30:11][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000393s ]
+[2020-08-06 13:37:23][sql] CONNECT:[ UseTime:0.001448s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 13:37:23][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001722s ]
+[2020-08-06 13:37:23][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000603s ]
+[2020-08-06 14:36:29][sql] CONNECT:[ UseTime:0.001257s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 14:36:29][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001818s ]
+[2020-08-06 14:36:29][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000297s ]
+[2020-08-06 14:36:36][sql] CONNECT:[ UseTime:0.001391s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 14:36:36][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001839s ]
+[2020-08-06 14:36:36][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000439s ]
+[2020-08-06 15:47:00][sql] CONNECT:[ UseTime:0.001821s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 15:47:00][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002469s ]
+[2020-08-06 15:47:00][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000569s ]
+[2020-08-06 15:47:36][sql] CONNECT:[ UseTime:0.001355s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 15:47:36][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002531s ]
+[2020-08-06 15:47:36][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000439s ]
+[2020-08-06 15:50:54][sql] CONNECT:[ UseTime:0.010767s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 15:50:54][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002876s ]
+[2020-08-06 15:50:54][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000379s ]
+[2020-08-06 15:55:24][sql] CONNECT:[ UseTime:0.001357s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 15:55:24][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002379s ]
+[2020-08-06 15:55:24][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000763s ]
+[2020-08-06 16:18:37][sql] CONNECT:[ UseTime:0.001387s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 16:18:37][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002707s ]
+[2020-08-06 16:18:37][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.001073s ]
+[2020-08-06 16:19:11][sql] CONNECT:[ UseTime:0.011880s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-06 16:19:11][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001834s ]
+[2020-08-06 16:19:11][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000424s ]
+[2020-08-07 14:10:54][sql] CONNECT:[ UseTime:0.002925s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:10:54][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002020s ]
+[2020-08-07 14:10:54][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000913s ]
+[2020-08-07 14:14:47][sql] CONNECT:[ UseTime:0.010837s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:14:47][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002676s ]
+[2020-08-07 14:14:47][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000447s ]
+[2020-08-07 14:15:00][sql] CONNECT:[ UseTime:0.011569s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:15:00][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001931s ]
+[2020-08-07 14:15:00][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000365s ]
+[2020-08-07 14:16:18][sql] CONNECT:[ UseTime:0.003188s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:16:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001716s ]
+[2020-08-07 14:16:18][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000346s ]
+[2020-08-07 14:16:41][sql] CONNECT:[ UseTime:0.001401s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:16:41][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001829s ]
+[2020-08-07 14:16:41][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000312s ]
+[2020-08-07 14:16:53][sql] CONNECT:[ UseTime:0.002093s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:16:53][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002560s ]
+[2020-08-07 14:16:53][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000579s ]
+[2020-08-07 14:17:26][sql] CONNECT:[ UseTime:0.001499s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:17:26][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001596s ]
+[2020-08-07 14:17:26][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000314s ]
+[2020-08-07 14:43:05][sql] CONNECT:[ UseTime:0.001722s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:43:05][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001867s ]
+[2020-08-07 14:43:05][sql] SELECT id value,CONCAT(username,' : ',nickname) title FROM `system_user` [ RunTime:0.000667s ]
+[2020-08-07 14:47:06][sql] CONNECT:[ UseTime:0.001441s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:47:06][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001741s ]
+[2020-08-07 14:47:06][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%ad%' [ RunTime:0.000445s ]
+[2020-08-07 14:55:43][sql] CONNECT:[ UseTime:0.001904s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:55:43][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001866s ]
+[2020-08-07 14:55:43][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000434s ]
+[2020-08-07 14:57:07][sql] CONNECT:[ UseTime:0.003112s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:57:07][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002317s ]
+[2020-08-07 14:57:07][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000354s ]
+[2020-08-07 14:58:22][sql] CONNECT:[ UseTime:0.003376s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:58:22][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.004416s ]
+[2020-08-07 14:58:22][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000821s ]
+[2020-08-07 14:58:37][sql] CONNECT:[ UseTime:0.001657s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 14:58:37][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002591s ]
+[2020-08-07 14:58:37][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000842s ]
+[2020-08-07 15:11:18][sql] CONNECT:[ UseTime:0.002716s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 15:11:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001915s ]
+[2020-08-07 15:11:18][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000403s ]
+[2020-08-07 16:01:58][sql] CONNECT:[ UseTime:0.002281s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 16:01:58][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003256s ]
+[2020-08-07 16:01:58][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000776s ]
+[2020-08-07 17:16:18][sql] CONNECT:[ UseTime:0.012419s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 17:16:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.005399s ]
+[2020-08-07 17:16:18][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000963s ]
+[2020-08-07 17:16:27][sql] CONNECT:[ UseTime:0.001365s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 17:16:27][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002933s ]
+[2020-08-07 17:16:27][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000444s ]
+[2020-08-07 17:16:31][sql] CONNECT:[ UseTime:0.011723s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 17:16:31][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001984s ]
+[2020-08-07 17:16:31][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.001396s ]
+[2020-08-07 17:55:09][sql] CONNECT:[ UseTime:0.013364s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 17:55:09][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.004931s ]
+[2020-08-07 17:55:09][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000703s ]
+[2020-08-07 18:03:35][sql] CONNECT:[ UseTime:0.001613s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-07 18:03:35][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003074s ]
+[2020-08-07 18:03:35][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000359s ]
+[2020-08-08 00:58:42][sql] CONNECT:[ UseTime:0.001506s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 00:58:42][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003414s ]
+[2020-08-08 00:58:42][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.001418s ]
+[2020-08-08 00:58:46][sql] CONNECT:[ UseTime:0.001312s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 00:58:46][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001789s ]
+[2020-08-08 00:58:46][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000598s ]
+[2020-08-08 00:59:18][sql] CONNECT:[ UseTime:0.001263s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 00:59:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002697s ]
+[2020-08-08 00:59:18][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000810s ]
+[2020-08-08 01:00:56][sql] CONNECT:[ UseTime:0.001208s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:00:56][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001636s ]
+[2020-08-08 01:00:56][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000327s ]
+[2020-08-08 01:01:12][sql] CONNECT:[ UseTime:0.011411s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:01:12][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001943s ]
+[2020-08-08 01:01:12][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000469s ]
+[2020-08-08 09:03:45][sql] CONNECT:[ UseTime:0.001336s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 09:03:45][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001769s ]
+[2020-08-08 09:03:45][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000487s ]
+[2020-08-08 09:10:18][sql] CONNECT:[ UseTime:0.001260s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 09:10:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001625s ]
+[2020-08-08 09:10:18][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10001 [ RunTime:0.000339s ]
+[2020-08-08 10:06:16][sql] CONNECT:[ UseTime:0.001191s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 10:06:16][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002961s ]
+[2020-08-08 10:06:16][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000415s ]
+[2020-08-08 11:08:32][sql] CONNECT:[ UseTime:0.010993s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 11:08:32][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002335s ]
+[2020-08-08 11:08:32][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000453s ]
+[2020-08-08 11:09:07][sql] CONNECT:[ UseTime:0.001297s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 11:09:07][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001874s ]
+[2020-08-08 11:09:07][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000612s ]
+[2020-08-08 12:47:48][sql] CONNECT:[ UseTime:0.002031s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 12:47:48][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.004180s ]
+[2020-08-08 12:47:48][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000565s ]
+[2020-08-08 12:48:18][sql] CONNECT:[ UseTime:0.001739s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 12:48:18][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002416s ]
+[2020-08-08 12:48:18][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%admin%' [ RunTime:0.000384s ]
+[2020-08-08 12:48:26][sql] CONNECT:[ UseTime:0.011050s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 12:48:26][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002447s ]
+[2020-08-08 12:48:26][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%子衡%' [ RunTime:0.000519s ]
+[2020-08-08 12:48:31][sql] CONNECT:[ UseTime:0.001314s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 12:48:31][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001792s ]
+[2020-08-08 12:48:31][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%test%' [ RunTime:0.000504s ]
+[2020-08-08 12:53:53][sql] CONNECT:[ UseTime:0.010433s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 12:53:53][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002102s ]
+[2020-08-08 12:53:53][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%test%' [ RunTime:0.000486s ]
+[2020-08-09 17:29:44][sql] CONNECT:[ UseTime:0.011705s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 17:29:44][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001796s ]
+[2020-08-09 17:29:44][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.000386s ]
+[2020-08-09 17:30:51][sql] CONNECT:[ UseTime:0.010787s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 17:30:51][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001881s ]
+[2020-08-09 17:30:51][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%郑%' [ RunTime:0.000540s ]
+[2020-08-09 18:29:23][sql] CONNECT:[ UseTime:0.001411s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:29:23][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001871s ]
+[2020-08-09 18:29:23][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.001436s ]
+[2020-08-09 18:29:41][sql] CONNECT:[ UseTime:0.001641s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:29:41][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002469s ]
+[2020-08-09 18:29:41][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%test%' [ RunTime:0.000593s ]
+[2020-08-09 18:29:41][sql] CONNECT:[ UseTime:0.011181s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:29:41][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001710s ]
+[2020-08-09 18:29:41][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%test%' [ RunTime:0.000536s ]
+[2020-08-09 18:29:54][sql] CONNECT:[ UseTime:0.001861s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:29:54][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002204s ]
+[2020-08-09 18:29:54][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000323s ]
+[2020-08-09 18:30:02][sql] CONNECT:[ UseTime:0.001324s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:30:02][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002666s ]
+[2020-08-09 18:30:02][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000367s ]
+[2020-08-09 18:30:04][sql] CONNECT:[ UseTime:0.003082s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:30:04][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003624s ]
+[2020-08-09 18:30:04][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.000627s ]
+[2020-08-09 18:43:27][sql] CONNECT:[ UseTime:0.001678s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 18:43:27][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001993s ]
+[2020-08-09 18:43:27][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.001638s ]
+[2020-08-10 10:08:03][sql] CONNECT:[ UseTime:0.047103s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:08:03][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.030113s ]
+[2020-08-10 10:08:03][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.031298s ]
+[2020-08-10 10:11:24][sql] CONNECT:[ UseTime:0.054081s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:11:24][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.035480s ]
+[2020-08-10 10:11:24][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.036751s ]
+[2020-08-10 10:11:27][sql] CONNECT:[ UseTime:0.147108s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:11:27][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.033053s ]
+[2020-08-10 10:11:27][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.032792s ]
+[2020-08-10 12:21:26][sql] CONNECT:[ UseTime:0.001978s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 12:21:26][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003072s ]
+[2020-08-10 12:21:26][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000982s ]
+[2020-08-10 14:48:47][sql] CONNECT:[ UseTime:0.001539s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:48:47][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003025s ]
+[2020-08-10 14:48:47][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.000675s ]
+[2020-08-10 14:48:52][sql] CONNECT:[ UseTime:0.001121s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:48:52][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001939s ]
+[2020-08-10 14:48:52][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000438s ]
+[2020-08-10 14:49:03][sql] CONNECT:[ UseTime:0.001554s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:49:03][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001733s ]
+[2020-08-10 14:49:03][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10000,10001) [ RunTime:0.000402s ]
+[2020-08-10 14:49:13][sql] CONNECT:[ UseTime:0.002257s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:49:13][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003015s ]
+[2020-08-10 14:49:13][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000498s ]
+[2020-08-10 14:50:32][sql] CONNECT:[ UseTime:0.010893s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:50:32][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001943s ]
+[2020-08-10 14:50:32][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%test%' [ RunTime:0.000582s ]
+[2020-08-10 14:52:19][sql] CONNECT:[ UseTime:0.011442s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:52:19][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.004090s ]
+[2020-08-10 14:52:19][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `username` LIKE '%test%' [ RunTime:0.000671s ]
+[2020-08-10 14:52:31][sql] CONNECT:[ UseTime:0.010752s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:52:31][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.006171s ]
+[2020-08-10 14:52:31][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000688s ]
+[2020-08-10 14:52:37][sql] CONNECT:[ UseTime:0.001934s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 14:52:37][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001937s ]
+[2020-08-10 14:52:37][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000844s ]
+[2020-08-10 15:59:38][sql] CONNECT:[ UseTime:0.001184s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 15:59:38][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001618s ]
+[2020-08-10 15:59:38][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000309s ]
+[2020-08-10 16:17:34][sql] CONNECT:[ UseTime:0.011948s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:17:34][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002291s ]
+[2020-08-10 16:17:34][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000445s ]
+[2020-08-10 16:34:39][sql] CONNECT:[ UseTime:0.003336s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:34:39][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002822s ]
+[2020-08-10 16:34:39][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000599s ]
+[2020-08-10 16:34:42][sql] CONNECT:[ UseTime:0.001143s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:34:42][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001913s ]
+[2020-08-10 16:34:42][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000324s ]
+[2020-08-10 16:34:59][sql] CONNECT:[ UseTime:0.001268s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:34:59][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002261s ]
+[2020-08-10 16:34:59][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000344s ]
+[2020-08-10 16:35:19][sql] CONNECT:[ UseTime:0.001248s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:35:19][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002251s ]
+[2020-08-10 16:35:19][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.000414s ]
+[2020-08-10 16:35:26][sql] CONNECT:[ UseTime:0.001442s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:35:26][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001891s ]
+[2020-08-10 16:35:26][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000313s ]
+[2020-08-10 16:35:51][sql] CONNECT:[ UseTime:0.002411s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:35:51][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.003762s ]
+[2020-08-10 16:35:51][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000536s ]
+[2020-08-10 16:35:57][sql] CONNECT:[ UseTime:0.001413s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:35:57][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002265s ]
+[2020-08-10 16:35:57][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10002 [ RunTime:0.000357s ]
+[2020-08-10 16:36:31][sql] CONNECT:[ UseTime:0.002234s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:36:31][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001876s ]
+[2020-08-10 16:36:31][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000443s ]
+[2020-08-10 16:36:36][sql] CONNECT:[ UseTime:0.001452s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:36:36][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.001696s ]
+[2020-08-10 16:36:36][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` IN (10001,10000) [ RunTime:0.000474s ]
+[2020-08-10 16:39:57][sql] CONNECT:[ UseTime:0.002975s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 16:39:57][sql] SHOW FULL COLUMNS FROM `system_user` [ RunTime:0.002859s ]
+[2020-08-10 16:39:57][sql] SELECT `id`,`username`,`nickname`,`headimg` FROM `system_user` WHERE  `id` = 10000 [ RunTime:0.001074s ]

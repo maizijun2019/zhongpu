@@ -1,0 +1,144 @@
+[2020-07-23 13:17:38][sql] CONNECT:[ UseTime:0.048436s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:17:38][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.032363s ]
+[2020-07-23 13:17:38][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.031456s ]
+[2020-07-23 13:18:45][sql] CONNECT:[ UseTime:0.050623s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:18:45][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.032292s ]
+[2020-07-23 13:18:45][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.039394s ]
+[2020-07-23 14:01:26][sql] CONNECT:[ UseTime:0.001516s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:26][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.003121s ]
+[2020-07-23 14:01:26][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000816s ]
+[2020-07-23 14:01:59][sql] CONNECT:[ UseTime:0.001165s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:59][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.002037s ]
+[2020-07-23 14:01:59][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001200s ]
+[2020-07-23 14:02:18][sql] CONNECT:[ UseTime:0.001384s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:18][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001696s ]
+[2020-07-23 14:02:18][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000623s ]
+[2020-07-23 14:02:31][sql] CONNECT:[ UseTime:0.001138s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:31][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001590s ]
+[2020-07-23 14:02:31][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000451s ]
+[2020-07-23 14:02:55][sql] CONNECT:[ UseTime:0.001209s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:55][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001749s ]
+[2020-07-23 14:02:55][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000581s ]
+[2020-07-23 14:03:09][sql] CONNECT:[ UseTime:0.001245s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:03:09][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001553s ]
+[2020-07-23 14:03:09][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000596s ]
+[2020-07-23 14:07:59][sql] CONNECT:[ UseTime:0.001247s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:07:59][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001579s ]
+[2020-07-23 14:07:59][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000453s ]
+[2020-07-23 14:45:34][sql] CONNECT:[ UseTime:0.002125s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:45:34][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001730s ]
+[2020-07-23 14:45:34][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001987s ]
+[2020-07-23 14:48:35][sql] CONNECT:[ UseTime:0.001320s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:35][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.002192s ]
+[2020-07-23 14:48:35][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001524s ]
+[2020-07-23 14:49:08][sql] CONNECT:[ UseTime:0.001294s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:08][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001593s ]
+[2020-07-23 14:49:08][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000454s ]
+[2020-07-23 14:49:29][sql] CONNECT:[ UseTime:0.001245s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:29][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001721s ]
+[2020-07-23 14:49:29][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000621s ]
+[2020-07-23 15:02:09][sql] CONNECT:[ UseTime:0.002426s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:09][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001594s ]
+[2020-07-23 15:02:09][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000594s ]
+[2020-07-23 15:02:16][sql] CONNECT:[ UseTime:0.001434s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:16][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001721s ]
+[2020-07-23 15:02:16][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000787s ]
+[2020-07-23 15:03:16][sql] CONNECT:[ UseTime:0.001348s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:16][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001602s ]
+[2020-07-23 15:03:16][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000410s ]
+[2020-07-23 15:03:22][sql] CONNECT:[ UseTime:0.001245s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:22][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001601s ]
+[2020-07-23 15:03:22][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000460s ]
+[2020-07-23 15:03:58][sql] CONNECT:[ UseTime:0.001168s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:58][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001598s ]
+[2020-07-23 15:03:58][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000347s ]
+[2020-07-23 15:04:59][sql] CONNECT:[ UseTime:0.001240s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:59][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.003195s ]
+[2020-07-23 15:04:59][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000633s ]
+[2020-07-23 15:33:46][sql] CONNECT:[ UseTime:0.001246s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:33:46][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001659s ]
+[2020-07-23 15:33:46][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000617s ]
+[2020-07-23 17:23:31][sql] CONNECT:[ UseTime:0.002732s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:31][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001773s ]
+[2020-07-23 17:23:31][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001574s ]
+[2020-07-23 17:23:43][sql] CONNECT:[ UseTime:0.001232s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:43][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001757s ]
+[2020-07-23 17:23:43][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000428s ]
+[2020-07-23 17:23:49][sql] CONNECT:[ UseTime:0.001246s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:49][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001600s ]
+[2020-07-23 17:23:49][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000502s ]
+[2020-07-23 17:23:52][sql] CONNECT:[ UseTime:0.001209s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:23:52][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.002650s ]
+[2020-07-23 17:23:52][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001106s ]
+[2020-07-23 17:24:40][sql] CONNECT:[ UseTime:0.002534s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 17:24:40][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001720s ]
+[2020-07-23 17:24:40][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000445s ]
+[2020-07-23 19:45:26][sql] CONNECT:[ UseTime:0.001294s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:26][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001589s ]
+[2020-07-23 19:45:26][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001166s ]
+[2020-07-23 19:45:31][sql] CONNECT:[ UseTime:0.001282s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:31][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.003110s ]
+[2020-07-23 19:45:31][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000565s ]
+[2020-07-23 19:45:35][sql] CONNECT:[ UseTime:0.001259s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:35][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001585s ]
+[2020-07-23 19:45:35][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000479s ]
+[2020-07-23 19:45:39][sql] CONNECT:[ UseTime:0.001218s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:39][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001777s ]
+[2020-07-23 19:45:39][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000613s ]
+[2020-07-24 09:00:46][sql] CONNECT:[ UseTime:0.001370s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:46][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001826s ]
+[2020-07-24 09:00:46][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001237s ]
+[2020-07-24 09:00:53][sql] CONNECT:[ UseTime:0.001270s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:53][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001895s ]
+[2020-07-24 09:00:53][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000697s ]
+[2020-07-24 09:00:58][sql] CONNECT:[ UseTime:0.003821s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:58][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001774s ]
+[2020-07-24 09:00:58][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000472s ]
+[2020-07-24 13:51:29][sql] CONNECT:[ UseTime:0.001868s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:51:29][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.003553s ]
+[2020-07-24 13:51:29][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001841s ]
+[2020-07-24 13:52:05][sql] CONNECT:[ UseTime:0.002383s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:52:05][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001685s ]
+[2020-07-24 13:52:05][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000819s ]
+[2020-07-24 13:52:13][sql] CONNECT:[ UseTime:0.010742s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:52:13][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.002081s ]
+[2020-07-24 13:52:13][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000844s ]
+[2020-07-24 14:35:54][sql] CONNECT:[ UseTime:0.001364s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 14:35:54][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.003585s ]
+[2020-07-24 14:35:54][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001711s ]
+[2020-07-24 15:07:29][sql] CONNECT:[ UseTime:0.001200s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 15:07:29][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001650s ]
+[2020-07-24 15:07:29][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000572s ]
+[2020-07-24 15:07:32][sql] CONNECT:[ UseTime:0.003511s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 15:07:32][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001556s ]
+[2020-07-24 15:07:32][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000469s ]
+[2020-07-24 16:21:58][sql] CONNECT:[ UseTime:0.003905s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 16:21:58][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.002776s ]
+[2020-07-24 16:21:58][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.001960s ]
+[2020-08-09 22:07:15][sql] CONNECT:[ UseTime:0.001559s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:15][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.001975s ]
+[2020-08-09 22:07:15][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.015801s ]
+[2020-08-09 22:07:51][sql] CONNECT:[ UseTime:0.002961s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:51][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.002541s ]
+[2020-08-09 22:07:51][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.000732s ]
+[2020-08-09 22:39:47][sql] CONNECT:[ UseTime:0.152013s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:39:47][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.153934s ]
+[2020-08-09 22:39:47][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.031920s ]
+[2020-08-09 22:40:03][sql] CONNECT:[ UseTime:0.084142s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:40:03][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.036601s ]
+[2020-08-09 22:40:03][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.038371s ]
+[2020-08-09 22:40:08][sql] CONNECT:[ UseTime:0.044276s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:40:08][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.034473s ]
+[2020-08-09 22:40:08][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.033014s ]
+[2020-08-10 10:09:47][sql] CONNECT:[ UseTime:0.045134s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:47][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.029471s ]
+[2020-08-10 10:09:47][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.028811s ]
+[2020-08-10 10:09:52][sql] CONNECT:[ UseTime:0.049043s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:52][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.036488s ]
+[2020-08-10 10:09:52][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.031002s ]
+[2020-08-10 10:09:57][sql] CONNECT:[ UseTime:0.048710s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:57][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.042122s ]
+[2020-08-10 10:09:57][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.030956s ]
+[2020-08-10 10:10:14][sql] CONNECT:[ UseTime:0.073197s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:10:14][sql] SHOW FULL COLUMNS FROM `zp_region` [ RunTime:0.031939s ]
+[2020-08-10 10:10:14][sql] SELECT `region_id`,`name` FROM `zp_region` WHERE  `level` = 1 [ RunTime:0.031170s ]

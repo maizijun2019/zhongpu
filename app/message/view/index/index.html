@@ -1,0 +1,56 @@
+{extend name='main'}
+
+{block name="button"}
+<button data-modal='{:url("readerAll")}' data-title="全部标为已读" class='layui-btn layui-btn-sm layui-btn-primary'>全部标为已读</button>
+{/block}
+
+{block name="content"}
+<div class="think-box-shadow">
+    {empty name='list'}
+    <blockquote class="layui-elem-quote">没 有 记 录 哦！</blockquote>
+    {else}
+    <table class="layui-table" lay-skin="line">
+        <thead>
+        <tr>
+            <th class='list-table-sort-td'>
+                <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+            </th>
+            <th></th>
+            <th>标题</th>
+            <th>时间</th>
+            <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {foreach $list as $key=>$vo}
+        <tr data-dbclick>
+            <td class='list-table-sort-td'></td>
+            <td class='text-left nowrap'>
+                {if $vo.reader == 'Y'}
+                <span class="fa fa-envelope-open-o color-desc"></span>
+                {else}
+                <div class="inline-block sub-span-blue">
+                    <span class="fa fa-envelope-o"></span>
+                </div>
+                {/if}
+            </td>
+            <td class='text-left nowrap'>
+                <div class="inline-block sub-span-blue">
+                    <span>{$vo.title|default=''|raw}</span>
+                </div>
+            </td>
+            <td class='text-left nowrap'>
+                <div class="inline-block sub-span-blue">
+                    <span>{$vo.create_time_text|default=''|raw}</span>
+                </div>
+            </td>
+            <td class='text-center nowrap notselect'>
+                <a data-dbclick class="layui-btn layui-btn-xs" data-title="标为已读" data-modal='{:url("info")}?message_box_id={$vo.message_box_id}'>详情</a>
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {/empty}
+</div>
+{/block}

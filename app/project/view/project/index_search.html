@@ -1,0 +1,169 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">项目名称</label>
+            <div class="layui-input-inline">
+                <input name="project_name" value="{:input('project_name')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-input-inline">
+                <select id="projectLevel" name="project_level_id" class="layui-select">
+                    <option value="all">全部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">省、市、区</label>
+            <div class="layui-input-inline">
+                <select id="province"  name="province_region_id" lay-filter="province_add" class="layui-select">
+                    <option value="all">请选择省</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select id="city"  name="city_region_id" lay-filter="city_add" class="layui-select">
+                    <option value="all">请选择市</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select id="area"  name="area_region_id" class="layui-select">
+                    <option value="all">请选择区</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+        </div>
+    </form>
+
+</fieldset>
+
+<script>
+    $.ajax({
+        url:"{:url('levelArray')}",
+        method:"GET",
+        success:function(data){
+            data = JSON.parse(data);
+            var project_level_id = "{:input('get.project_level_id')}";
+            var select = "";
+            for(var i = 0;i < data.length;i++){
+                select = "";
+                if(project_level_id > 0 && project_level_id == data[i]["project_level_id"]){
+                    select = "selected";
+                }
+                $("#projectLevel").append("<option " + select + " value='" + data[i]["project_level_id"] + "'>" + data[i]["spl"] + data[i]["title"] + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    var province_region_id = "{:input('province_region_id')}";
+    $.ajax({
+        url:"{:url('region/index/province')}",
+        method:"GET",
+        success:function(data){
+            data = JSON.parse(data);
+            var select = "";
+            for(var i = 0;i < data.length;i++){
+                select = "";
+                if(province_region_id != "" && province_region_id == data[i]["region_id"]){
+                    select = "selected";
+                }
+                $("#province").append("<option " + select + " value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    if(province_region_id > 0){
+        var city_region_id = "{:input('city_region_id')}";
+        $.ajax({
+            url:"{:url('region/index/city')}?province_region_id=" + province_region_id,
+            method:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                var select = "";
+                for(var i = 0;i < data.length;i++){
+                    select = "";
+                    if(city_region_id != "" && city_region_id == data[i]["region_id"]){
+                        select = "selected";
+                    }
+                    $("#city").append("<option " + select + " value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                }
+                form.render();
+            }
+        });
+
+        if(city_region_id > 0){
+            var area_region_id = "{:input('area_region_id')}";
+            $.ajax({
+                url:"{:url('region/index/area')}?city_region_id=" + city_region_id,
+                method:"GET",
+                success:function(data){
+                    data = JSON.parse(data);
+                    var select = "";
+                    for(var i = 0;i < data.length;i++){
+                        select = "";
+                        if(area_region_id != "" && area_region_id == data[i]["region_id"]){
+                            select = "selected";
+                        }
+                        $("#area").append("<option " + select + " value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                    }
+                    form.render();
+                }
+            });
+        }
+    }
+
+    form.render();
+
+    form.on('select(province_add)', function(data){
+        $("#city").empty();
+        $("#city").append("<option value='all'>请选择市</option>");
+        $("#area").empty();
+        $("#area").append("<option value='all'>请选择区</option>");
+        if(data.value == "all"){
+            form.render();
+            return;
+        }
+        $.ajax({
+            url:"{:url('region/index/city')}?province_region_id=" + data.value,
+            method:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                for(var i = 0;i < data.length;i++){
+                    $("#city").append("<option value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                }
+                form.render();
+            }
+        });
+    });
+
+    form.on('select(city_add)', function(data){
+        $("#area").empty();
+        $("#area").append("<option value='all'>请选择区</option>");
+        if(data.value == "all"){
+            form.render();
+            return;
+        }
+        $.ajax({
+            url:"{:url('region/index/area')}?city_region_id=" + data.value,
+            method:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                for(var i = 0;i < data.length;i++){
+                    $("#area").append("<option value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                }
+                form.render();
+            }
+        });
+    });
+</script>

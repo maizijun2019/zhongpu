@@ -1,0 +1,506 @@
+[2020-07-23 13:17:47][sql] CONNECT:[ UseTime:0.048358s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:17:47][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.031786s ]
+[2020-07-23 13:17:47][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.030749s ]
+[2020-07-23 13:17:47][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.031735s ]
+[2020-07-23 13:17:47][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.031867s ]
+[2020-07-23 13:17:47][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.032268s ]
+[2020-07-23 13:17:47][sql] CONNECT:[ UseTime:0.059362s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:17:47][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.040639s ]
+[2020-07-23 13:17:47][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.040488s ]
+[2020-07-23 13:18:08][sql] CONNECT:[ UseTime:0.054450s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:18:08][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.032831s ]
+[2020-07-23 13:18:08][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.032425s ]
+[2020-07-23 13:18:08][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.032933s ]
+[2020-07-23 13:18:08][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.032531s ]
+[2020-07-23 13:18:08][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.036494s ]
+[2020-07-23 13:18:09][sql] CONNECT:[ UseTime:0.048831s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:18:09][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.030332s ]
+[2020-07-23 13:18:09][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.030557s ]
+[2020-07-23 13:33:02][sql] CONNECT:[ UseTime:0.001139s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 13:33:10][sql] CONNECT:[ UseTime:0.012365s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:29][sql] CONNECT:[ UseTime:0.001413s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:29][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002206s ]
+[2020-07-23 14:01:29][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000845s ]
+[2020-07-23 14:01:29][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000502s ]
+[2020-07-23 14:01:29][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001721s ]
+[2020-07-23 14:01:29][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000960s ]
+[2020-07-23 14:01:29][sql] CONNECT:[ UseTime:0.001252s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:01:29][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.003546s ]
+[2020-07-23 14:01:29][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000673s ]
+[2020-07-23 14:02:01][sql] CONNECT:[ UseTime:0.001363s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:01][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001834s ]
+[2020-07-23 14:02:01][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000681s ]
+[2020-07-23 14:02:01][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000473s ]
+[2020-07-23 14:02:01][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001665s ]
+[2020-07-23 14:02:01][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000822s ]
+[2020-07-23 14:02:01][sql] CONNECT:[ UseTime:0.001351s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:01][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001669s ]
+[2020-07-23 14:02:01][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000584s ]
+[2020-07-23 14:02:20][sql] CONNECT:[ UseTime:0.001343s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:20][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001823s ]
+[2020-07-23 14:02:20][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000643s ]
+[2020-07-23 14:02:20][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000497s ]
+[2020-07-23 14:02:20][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003385s ]
+[2020-07-23 14:02:20][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000775s ]
+[2020-07-23 14:02:20][sql] CONNECT:[ UseTime:0.001572s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:20][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001616s ]
+[2020-07-23 14:02:20][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000661s ]
+[2020-07-23 14:02:30][sql] CONNECT:[ UseTime:0.001342s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:30][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001768s ]
+[2020-07-23 14:02:30][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000657s ]
+[2020-07-23 14:02:30][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000469s ]
+[2020-07-23 14:02:30][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003548s ]
+[2020-07-23 14:02:30][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000869s ]
+[2020-07-23 14:02:30][sql] CONNECT:[ UseTime:0.002329s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:30][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001620s ]
+[2020-07-23 14:02:30][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000392s ]
+[2020-07-23 14:02:57][sql] CONNECT:[ UseTime:0.001300s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:57][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001878s ]
+[2020-07-23 14:02:57][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.001181s ]
+[2020-07-23 14:02:57][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000775s ]
+[2020-07-23 14:02:57][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001714s ]
+[2020-07-23 14:02:57][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000800s ]
+[2020-07-23 14:02:57][sql] CONNECT:[ UseTime:0.001365s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:02:57][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001489s ]
+[2020-07-23 14:02:57][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000409s ]
+[2020-07-23 14:03:08][sql] CONNECT:[ UseTime:0.001308s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:03:08][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002272s ]
+[2020-07-23 14:03:08][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000512s ]
+[2020-07-23 14:03:08][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000598s ]
+[2020-07-23 14:03:08][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001966s ]
+[2020-07-23 14:03:08][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000673s ]
+[2020-07-23 14:03:08][sql] CONNECT:[ UseTime:0.002733s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:03:08][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.004299s ]
+[2020-07-23 14:03:08][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.001551s ]
+[2020-07-23 14:08:00][sql] CONNECT:[ UseTime:0.001255s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:08:00][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002869s ]
+[2020-07-23 14:08:00][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000848s ]
+[2020-07-23 14:08:00][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000402s ]
+[2020-07-23 14:08:00][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001705s ]
+[2020-07-23 14:08:00][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000978s ]
+[2020-07-23 14:08:01][sql] CONNECT:[ UseTime:0.002747s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:08:01][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001829s ]
+[2020-07-23 14:08:01][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000577s ]
+[2020-07-23 14:48:22][sql] CONNECT:[ UseTime:0.002265s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:22][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001834s ]
+[2020-07-23 14:48:22][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000696s ]
+[2020-07-23 14:48:22][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000548s ]
+[2020-07-23 14:48:22][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.002049s ]
+[2020-07-23 14:48:22][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000781s ]
+[2020-07-23 14:48:22][sql] CONNECT:[ UseTime:0.002648s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:22][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002276s ]
+[2020-07-23 14:48:22][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000710s ]
+[2020-07-23 14:48:28][sql] CONNECT:[ UseTime:0.001445s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:28][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001709s ]
+[2020-07-23 14:48:28][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000804s ]
+[2020-07-23 14:48:28][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000491s ]
+[2020-07-23 14:48:28][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001848s ]
+[2020-07-23 14:48:28][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001157s ]
+[2020-07-23 14:48:28][sql] CONNECT:[ UseTime:0.001423s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:48:28][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001544s ]
+[2020-07-23 14:48:28][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000439s ]
+[2020-07-23 14:49:07][sql] CONNECT:[ UseTime:0.001546s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:07][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001981s ]
+[2020-07-23 14:49:07][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000638s ]
+[2020-07-23 14:49:07][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000469s ]
+[2020-07-23 14:49:07][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001739s ]
+[2020-07-23 14:49:07][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000909s ]
+[2020-07-23 14:49:07][sql] CONNECT:[ UseTime:0.001336s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:07][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001497s ]
+[2020-07-23 14:49:07][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000648s ]
+[2020-07-23 14:49:45][sql] CONNECT:[ UseTime:0.001303s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:45][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001733s ]
+[2020-07-23 14:49:45][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.001319s ]
+[2020-07-23 14:49:45][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000810s ]
+[2020-07-23 14:49:45][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001843s ]
+[2020-07-23 14:49:45][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001024s ]
+[2020-07-23 14:49:45][sql] CONNECT:[ UseTime:0.001381s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 14:49:45][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001663s ]
+[2020-07-23 14:49:45][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000661s ]
+[2020-07-23 15:02:06][sql] CONNECT:[ UseTime:0.001194s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:06][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.004018s ]
+[2020-07-23 15:02:06][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000638s ]
+[2020-07-23 15:02:06][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000294s ]
+[2020-07-23 15:02:06][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001872s ]
+[2020-07-23 15:02:06][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001157s ]
+[2020-07-23 15:02:06][sql] CONNECT:[ UseTime:0.001592s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:06][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001569s ]
+[2020-07-23 15:02:06][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000592s ]
+[2020-07-23 15:02:10][sql] CONNECT:[ UseTime:0.001341s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:10][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001944s ]
+[2020-07-23 15:02:10][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000799s ]
+[2020-07-23 15:02:10][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000556s ]
+[2020-07-23 15:02:10][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001960s ]
+[2020-07-23 15:02:10][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001253s ]
+[2020-07-23 15:02:10][sql] CONNECT:[ UseTime:0.001243s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:10][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001623s ]
+[2020-07-23 15:02:10][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000370s ]
+[2020-07-23 15:02:17][sql] CONNECT:[ UseTime:0.011971s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:17][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001848s ]
+[2020-07-23 15:02:17][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000400s ]
+[2020-07-23 15:02:17][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000483s ]
+[2020-07-23 15:02:17][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001925s ]
+[2020-07-23 15:02:17][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000700s ]
+[2020-07-23 15:02:17][sql] CONNECT:[ UseTime:0.001367s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:17][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.003120s ]
+[2020-07-23 15:02:17][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000651s ]
+[2020-07-23 15:02:33][sql] CONNECT:[ UseTime:0.001298s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:33][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001858s ]
+[2020-07-23 15:02:33][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000461s ]
+[2020-07-23 15:02:33][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000502s ]
+[2020-07-23 15:02:33][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001698s ]
+[2020-07-23 15:02:33][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000593s ]
+[2020-07-23 15:02:33][sql] CONNECT:[ UseTime:0.001328s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:02:33][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001598s ]
+[2020-07-23 15:02:33][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000390s ]
+[2020-07-23 15:03:12][sql] CONNECT:[ UseTime:0.010654s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:12][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001830s ]
+[2020-07-23 15:03:12][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000706s ]
+[2020-07-23 15:03:12][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000434s ]
+[2020-07-23 15:03:12][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001721s ]
+[2020-07-23 15:03:12][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001115s ]
+[2020-07-23 15:03:12][sql] CONNECT:[ UseTime:0.003257s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:12][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002527s ]
+[2020-07-23 15:03:12][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000604s ]
+[2020-07-23 15:03:23][sql] CONNECT:[ UseTime:0.001374s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:23][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001783s ]
+[2020-07-23 15:03:23][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000681s ]
+[2020-07-23 15:03:23][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000777s ]
+[2020-07-23 15:03:23][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001704s ]
+[2020-07-23 15:03:23][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000711s ]
+[2020-07-23 15:03:23][sql] CONNECT:[ UseTime:0.001331s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:03:23][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001592s ]
+[2020-07-23 15:03:23][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000480s ]
+[2020-07-23 15:04:01][sql] CONNECT:[ UseTime:0.001387s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:01][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001745s ]
+[2020-07-23 15:04:01][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000474s ]
+[2020-07-23 15:04:01][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000480s ]
+[2020-07-23 15:04:01][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001997s ]
+[2020-07-23 15:04:01][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000610s ]
+[2020-07-23 15:04:01][sql] CONNECT:[ UseTime:0.001527s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:01][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001887s ]
+[2020-07-23 15:04:01][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000849s ]
+[2020-07-23 15:04:56][sql] CONNECT:[ UseTime:0.001298s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:56][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002971s ]
+[2020-07-23 15:04:56][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000844s ]
+[2020-07-23 15:04:56][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000520s ]
+[2020-07-23 15:04:56][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001964s ]
+[2020-07-23 15:04:56][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000891s ]
+[2020-07-23 15:04:56][sql] CONNECT:[ UseTime:0.001294s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:04:56][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001570s ]
+[2020-07-23 15:04:56][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000406s ]
+[2020-07-23 15:33:48][sql] CONNECT:[ UseTime:0.001426s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:33:48][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001795s ]
+[2020-07-23 15:33:48][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000683s ]
+[2020-07-23 15:33:48][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000716s ]
+[2020-07-23 15:33:48][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001718s ]
+[2020-07-23 15:33:48][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.004961s ]
+[2020-07-23 15:33:48][sql] CONNECT:[ UseTime:0.001862s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 15:33:48][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001511s ]
+[2020-07-23 15:33:48][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000385s ]
+[2020-07-23 19:45:27][sql] CONNECT:[ UseTime:0.001856s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:27][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001844s ]
+[2020-07-23 19:45:27][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000794s ]
+[2020-07-23 19:45:27][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000648s ]
+[2020-07-23 19:45:27][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001742s ]
+[2020-07-23 19:45:27][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001014s ]
+[2020-07-23 19:45:27][sql] CONNECT:[ UseTime:0.001990s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:27][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001701s ]
+[2020-07-23 19:45:27][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000569s ]
+[2020-07-23 19:45:36][sql] CONNECT:[ UseTime:0.002425s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:36][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001747s ]
+[2020-07-23 19:45:36][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000879s ]
+[2020-07-23 19:45:36][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000465s ]
+[2020-07-23 19:45:36][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001733s ]
+[2020-07-23 19:45:36][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001139s ]
+[2020-07-23 19:45:36][sql] CONNECT:[ UseTime:0.001393s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-23 19:45:36][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001792s ]
+[2020-07-23 19:45:36][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000451s ]
+[2020-07-24 09:00:47][sql] CONNECT:[ UseTime:0.011461s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:47][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002143s ]
+[2020-07-24 09:00:47][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000789s ]
+[2020-07-24 09:00:47][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000504s ]
+[2020-07-24 09:00:47][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.002027s ]
+[2020-07-24 09:00:47][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001455s ]
+[2020-07-24 09:00:47][sql] CONNECT:[ UseTime:0.001968s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:47][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002407s ]
+[2020-07-24 09:00:47][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000711s ]
+[2020-07-24 09:00:52][sql] CONNECT:[ UseTime:0.001339s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:52][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001856s ]
+[2020-07-24 09:00:52][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000873s ]
+[2020-07-24 09:00:52][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000968s ]
+[2020-07-24 09:00:52][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001667s ]
+[2020-07-24 09:00:52][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000776s ]
+[2020-07-24 09:00:52][sql] CONNECT:[ UseTime:0.001704s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:00:52][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002662s ]
+[2020-07-24 09:00:52][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000615s ]
+[2020-07-24 09:01:00][sql] CONNECT:[ UseTime:0.001781s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:01:00][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001734s ]
+[2020-07-24 09:01:00][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000932s ]
+[2020-07-24 09:01:00][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000604s ]
+[2020-07-24 09:01:00][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001794s ]
+[2020-07-24 09:01:00][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001325s ]
+[2020-07-24 09:01:00][sql] CONNECT:[ UseTime:0.003946s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 09:01:00][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001652s ]
+[2020-07-24 09:01:00][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000555s ]
+[2020-07-24 10:36:21][sql] CONNECT:[ UseTime:0.013112s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 10:36:21][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.003911s ]
+[2020-07-24 10:36:21][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.003428s ]
+[2020-07-24 10:36:21][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.001015s ]
+[2020-07-24 10:36:21][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003205s ]
+[2020-07-24 10:36:21][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001903s ]
+[2020-07-24 10:36:21][sql] CONNECT:[ UseTime:0.002008s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 10:36:21][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001838s ]
+[2020-07-24 10:36:21][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000809s ]
+[2020-07-24 13:02:58][sql] CONNECT:[ UseTime:0.001306s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:02:58][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001738s ]
+[2020-07-24 13:02:58][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.002597s ]
+[2020-07-24 13:02:58][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000522s ]
+[2020-07-24 13:02:58][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001762s ]
+[2020-07-24 13:02:58][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001163s ]
+[2020-07-24 13:02:58][sql] CONNECT:[ UseTime:0.001664s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:02:58][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002477s ]
+[2020-07-24 13:02:58][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000905s ]
+[2020-07-24 13:06:49][sql] CONNECT:[ UseTime:0.002535s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:06:49][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001566s ]
+[2020-07-24 13:06:49][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000740s ]
+[2020-07-24 13:06:49][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000295s ]
+[2020-07-24 13:06:49][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001486s ]
+[2020-07-24 13:06:49][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000849s ]
+[2020-07-24 13:06:50][sql] CONNECT:[ UseTime:0.001168s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:06:50][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001771s ]
+[2020-07-24 13:06:50][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.002320s ]
+[2020-07-24 13:07:07][sql] CONNECT:[ UseTime:0.001351s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:07:07][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001755s ]
+[2020-07-24 13:07:07][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000476s ]
+[2020-07-24 13:07:07][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000465s ]
+[2020-07-24 13:07:07][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001938s ]
+[2020-07-24 13:07:07][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001610s ]
+[2020-07-24 13:07:07][sql] CONNECT:[ UseTime:0.002501s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:07:07][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001817s ]
+[2020-07-24 13:07:07][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000681s ]
+[2020-07-24 13:52:03][sql] CONNECT:[ UseTime:0.001296s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:52:03][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001779s ]
+[2020-07-24 13:52:03][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000979s ]
+[2020-07-24 13:52:03][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000463s ]
+[2020-07-24 13:52:03][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.002865s ]
+[2020-07-24 13:52:03][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001007s ]
+[2020-07-24 13:52:03][sql] CONNECT:[ UseTime:0.001630s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 13:52:03][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001979s ]
+[2020-07-24 13:52:03][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000537s ]
+[2020-07-24 14:35:55][sql] CONNECT:[ UseTime:0.001377s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 14:35:55][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001828s ]
+[2020-07-24 14:35:55][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.001188s ]
+[2020-07-24 14:35:55][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000523s ]
+[2020-07-24 14:35:55][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.002280s ]
+[2020-07-24 14:35:55][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001201s ]
+[2020-07-24 14:35:55][sql] CONNECT:[ UseTime:0.004176s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 14:35:55][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001494s ]
+[2020-07-24 14:35:55][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000574s ]
+[2020-07-24 15:07:27][sql] CONNECT:[ UseTime:0.001293s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 15:07:27][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002163s ]
+[2020-07-24 15:07:27][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000941s ]
+[2020-07-24 15:07:27][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000425s ]
+[2020-07-24 15:07:27][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.004267s ]
+[2020-07-24 15:07:27][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001146s ]
+[2020-07-24 15:07:27][sql] CONNECT:[ UseTime:0.004408s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-24 15:07:27][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001632s ]
+[2020-07-24 15:07:27][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000592s ]
+[2020-07-25 10:52:40][sql] CONNECT:[ UseTime:0.001322s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 10:52:40][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001875s ]
+[2020-07-25 10:52:40][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.006463s ]
+[2020-07-25 10:52:40][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000538s ]
+[2020-07-25 10:52:40][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001853s ]
+[2020-07-25 10:52:40][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.005175s ]
+[2020-07-25 10:52:40][sql] CONNECT:[ UseTime:0.012104s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 10:52:40][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002805s ]
+[2020-07-25 10:52:40][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000915s ]
+[2020-07-25 13:19:16][sql] CONNECT:[ UseTime:0.011159s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 13:19:16][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.003888s ]
+[2020-07-25 13:19:16][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.002168s ]
+[2020-07-25 13:19:16][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000524s ]
+[2020-07-25 13:19:16][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.002835s ]
+[2020-07-25 13:19:16][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.002015s ]
+[2020-07-25 13:19:16][sql] CONNECT:[ UseTime:0.011434s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 13:19:16][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001611s ]
+[2020-07-25 13:19:16][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000572s ]
+[2020-07-25 13:32:30][sql] CONNECT:[ UseTime:0.002465s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 13:32:30][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001774s ]
+[2020-07-25 13:32:30][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000780s ]
+[2020-07-25 13:32:30][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000515s ]
+[2020-07-25 13:32:30][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001720s ]
+[2020-07-25 13:32:30][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001395s ]
+[2020-07-25 13:32:30][sql] CONNECT:[ UseTime:0.001339s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-07-25 13:32:30][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001795s ]
+[2020-07-25 13:32:30][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000568s ]
+[2020-08-08 00:59:11][sql] CONNECT:[ UseTime:0.002224s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 00:59:11][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.005512s ]
+[2020-08-08 00:59:11][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.014853s ]
+[2020-08-08 00:59:11][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000985s ]
+[2020-08-08 00:59:11][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003820s ]
+[2020-08-08 00:59:11][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.004034s ]
+[2020-08-08 00:59:11][sql] CONNECT:[ UseTime:0.001896s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 00:59:11][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002229s ]
+[2020-08-08 00:59:11][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.001153s ]
+[2020-08-08 01:00:49][sql] CONNECT:[ UseTime:0.001242s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:00:49][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001797s ]
+[2020-08-08 01:00:49][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000725s ]
+[2020-08-08 01:00:49][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000345s ]
+[2020-08-08 01:00:49][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003032s ]
+[2020-08-08 01:00:49][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000980s ]
+[2020-08-08 01:00:50][sql] CONNECT:[ UseTime:0.001483s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:00:50][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002499s ]
+[2020-08-08 01:00:50][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.001225s ]
+[2020-08-08 01:01:02][sql] CONNECT:[ UseTime:0.001235s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:01:02][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.003207s ]
+[2020-08-08 01:01:02][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000681s ]
+[2020-08-08 01:01:02][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000552s ]
+[2020-08-08 01:01:02][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001664s ]
+[2020-08-08 01:01:02][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000560s ]
+[2020-08-08 01:01:02][sql] CONNECT:[ UseTime:0.002002s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 01:01:02][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001569s ]
+[2020-08-08 01:01:02][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000498s ]
+[2020-08-08 16:57:24][sql] CONNECT:[ UseTime:0.001399s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 16:57:24][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.003099s ]
+[2020-08-08 16:57:24][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.001431s ]
+[2020-08-08 16:57:24][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000625s ]
+[2020-08-08 16:57:24][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.004613s ]
+[2020-08-08 16:57:24][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.003599s ]
+[2020-08-08 16:57:24][sql] CONNECT:[ UseTime:0.001802s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-08 16:57:24][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002250s ]
+[2020-08-08 16:57:24][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.001170s ]
+[2020-08-09 13:01:07][sql] CONNECT:[ UseTime:0.010540s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 13:01:07][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.007014s ]
+[2020-08-09 13:01:07][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.018274s ]
+[2020-08-09 13:01:07][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.001763s ]
+[2020-08-09 13:01:07][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003373s ]
+[2020-08-09 13:01:07][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.018112s ]
+[2020-08-09 13:01:08][sql] CONNECT:[ UseTime:0.001755s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 13:01:08][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001668s ]
+[2020-08-09 13:01:08][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.005392s ]
+[2020-08-09 14:37:15][sql] CONNECT:[ UseTime:0.003237s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 14:37:15][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.001725s ]
+[2020-08-09 14:37:15][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.008658s ]
+[2020-08-09 14:37:15][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.001766s ]
+[2020-08-09 14:37:15][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001564s ]
+[2020-08-09 14:37:15][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.003605s ]
+[2020-08-09 14:37:15][sql] CONNECT:[ UseTime:0.010635s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 14:37:15][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002341s ]
+[2020-08-09 14:37:15][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.005222s ]
+[2020-08-09 22:07:15][sql] CONNECT:[ UseTime:0.001291s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:15][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002047s ]
+[2020-08-09 22:07:15][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.001981s ]
+[2020-08-09 22:07:15][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000680s ]
+[2020-08-09 22:07:15][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001846s ]
+[2020-08-09 22:07:15][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001234s ]
+[2020-08-09 22:07:16][sql] CONNECT:[ UseTime:0.001337s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:16][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001858s ]
+[2020-08-09 22:07:16][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000710s ]
+[2020-08-09 22:07:17][sql] CONNECT:[ UseTime:0.001485s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:17][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002990s ]
+[2020-08-09 22:07:17][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.000868s ]
+[2020-08-09 22:07:17][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000461s ]
+[2020-08-09 22:07:17][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.001552s ]
+[2020-08-09 22:07:17][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.000935s ]
+[2020-08-09 22:07:17][sql] CONNECT:[ UseTime:0.001430s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:17][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.001839s ]
+[2020-08-09 22:07:17][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.000713s ]
+[2020-08-09 22:07:50][sql] CONNECT:[ UseTime:0.012865s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:50][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.002796s ]
+[2020-08-09 22:07:50][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.001094s ]
+[2020-08-09 22:07:50][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.000511s ]
+[2020-08-09 22:07:50][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.003230s ]
+[2020-08-09 22:07:50][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (40,35,34) GROUP BY `patent_id` ) LIMIT 3 [ RunTime:0.001351s ]
+[2020-08-09 22:07:50][sql] CONNECT:[ UseTime:0.001690s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:07:50][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.002601s ]
+[2020-08-09 22:07:50][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.001036s ]
+[2020-08-09 22:37:22][sql] CONNECT:[ UseTime:0.212506s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:37:22][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.048748s ]
+[2020-08-09 22:37:22][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.154555s ]
+[2020-08-09 22:37:22][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.112922s ]
+[2020-08-09 22:37:22][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.033351s ]
+[2020-08-09 22:37:22][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.030695s ]
+[2020-08-09 22:37:22][sql] CONNECT:[ UseTime:0.125629s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:37:22][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.149053s ]
+[2020-08-09 22:37:22][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.036844s ]
+[2020-08-09 22:37:56][sql] CONNECT:[ UseTime:0.047494s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:37:56][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.031312s ]
+[2020-08-09 22:37:56][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.030435s ]
+[2020-08-09 22:37:56][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.029778s ]
+[2020-08-09 22:37:56][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.030286s ]
+[2020-08-09 22:37:56][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.030420s ]
+[2020-08-09 22:37:56][sql] CONNECT:[ UseTime:0.043098s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:37:56][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.027478s ]
+[2020-08-09 22:37:56][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.066492s ]
+[2020-08-09 22:39:48][sql] CONNECT:[ UseTime:0.050424s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:39:48][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.031373s ]
+[2020-08-09 22:39:48][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.029395s ]
+[2020-08-09 22:39:48][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.031129s ]
+[2020-08-09 22:39:48][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.031892s ]
+[2020-08-09 22:39:48][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.032295s ]
+[2020-08-09 22:39:48][sql] CONNECT:[ UseTime:0.048071s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:39:48][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.030287s ]
+[2020-08-09 22:39:48][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.032652s ]
+[2020-08-09 22:40:01][sql] CONNECT:[ UseTime:0.043898s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:40:01][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.076403s ]
+[2020-08-09 22:40:01][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.030443s ]
+[2020-08-09 22:40:01][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.030053s ]
+[2020-08-09 22:40:01][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.034797s ]
+[2020-08-09 22:40:01][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.029134s ]
+[2020-08-09 22:40:01][sql] CONNECT:[ UseTime:0.048167s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:40:01][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.033779s ]
+[2020-08-09 22:40:01][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.030004s ]
+[2020-08-09 22:40:09][sql] CONNECT:[ UseTime:0.047756s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:40:09][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.033355s ]
+[2020-08-09 22:40:09][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.030149s ]
+[2020-08-09 22:40:09][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.035434s ]
+[2020-08-09 22:40:09][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.030867s ]
+[2020-08-09 22:40:09][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.031778s ]
+[2020-08-09 22:40:10][sql] CONNECT:[ UseTime:0.050817s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-09 22:40:10][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.035202s ]
+[2020-08-09 22:40:10][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.032218s ]
+[2020-08-10 10:00:41][sql] CONNECT:[ UseTime:0.058505s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:00:41][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.036761s ]
+[2020-08-10 10:00:41][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.037069s ]
+[2020-08-10 10:00:41][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.036740s ]
+[2020-08-10 10:00:41][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.041882s ]
+[2020-08-10 10:00:41][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.069320s ]
+[2020-08-10 10:00:42][sql] CONNECT:[ UseTime:0.045994s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:00:42][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.029881s ]
+[2020-08-10 10:00:42][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.030810s ]
+[2020-08-10 10:09:43][sql] CONNECT:[ UseTime:0.086610s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:43][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.168504s ]
+[2020-08-10 10:09:43][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.042086s ]
+[2020-08-10 10:09:43][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.151752s ]
+[2020-08-10 10:09:43][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.047982s ]
+[2020-08-10 10:09:43][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.051384s ]
+[2020-08-10 10:09:44][sql] CONNECT:[ UseTime:0.124510s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:44][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.065152s ]
+[2020-08-10 10:09:44][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.042266s ]
+[2020-08-10 10:09:50][sql] CONNECT:[ UseTime:0.050863s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:50][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.038325s ]
+[2020-08-10 10:09:50][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.033077s ]
+[2020-08-10 10:09:50][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.035139s ]
+[2020-08-10 10:09:50][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.030537s ]
+[2020-08-10 10:09:50][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.030663s ]
+[2020-08-10 10:09:50][sql] CONNECT:[ UseTime:0.046398s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:50][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.031319s ]
+[2020-08-10 10:09:50][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.034638s ]
+[2020-08-10 10:09:58][sql] CONNECT:[ UseTime:0.050801s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:58][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.032802s ]
+[2020-08-10 10:09:58][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.070253s ]
+[2020-08-10 10:09:58][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.031777s ]
+[2020-08-10 10:09:58][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.030265s ]
+[2020-08-10 10:09:58][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.031705s ]
+[2020-08-10 10:09:58][sql] CONNECT:[ UseTime:0.045458s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:09:58][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.029662s ]
+[2020-08-10 10:09:58][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.028720s ]
+[2020-08-10 10:10:12][sql] CONNECT:[ UseTime:0.047996s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:10:12][sql] SHOW FULL COLUMNS FROM `zp_patent` [ RunTime:0.032957s ]
+[2020-08-10 10:10:12][sql] SELECT COUNT(*) AS think_count FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` [ RunTime:0.031296s ]
+[2020-08-10 10:10:12][sql] SELECT `a`.`patent_id`,`a`.`patent_no`,`a`.`patent_name`,`a`.`apply_people`,`a`.`apply_date`,`a`.`pay_end_date`,`a`.`pay_date`,`a`.`warrant_date`,`a`.`reduce`,`a`.`annual_type`,`a`.`annual_fee`,`a`.`reduce_annual_fee`,`b`.`title` FROM `zp_patent` `a` LEFT JOIN `zp_project_level` `b` ON `a`.`project_level_id`=`b`.`project_level_id` ORDER BY `a`.`patent_id` DESC LIMIT 0,20 [ RunTime:0.033312s ]
+[2020-08-10 10:10:12][sql] SHOW FULL COLUMNS FROM `zp_patent_pay_log` [ RunTime:0.030844s ]
+[2020-08-10 10:10:12][sql] SELECT `patent_id`,`annual_type` FROM zp_patent_pay_log WHERE `patent_pay_log_id` IN ( SELECT max(patent_pay_log_id) patent_pay_log_id FROM `zp_patent_pay_log` WHERE  `patent_id` IN (36,35) GROUP BY `patent_id` ) LIMIT 2 [ RunTime:0.030657s ]
+[2020-08-10 10:10:12][sql] CONNECT:[ UseTime:0.046568s ] mysql:host=rm-uf6x37baqv0vx247qoo.mysql.rds.aliyuncs.com;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-10 10:10:12][sql] SHOW FULL COLUMNS FROM `zp_project_level` [ RunTime:0.028919s ]
+[2020-08-10 10:10:12][sql] SELECT `project_level_id`,`pid`,`title` FROM `zp_project_level` WHERE  `pid` = 1 ORDER BY `project_level_id` ASC [ RunTime:0.028056s ]

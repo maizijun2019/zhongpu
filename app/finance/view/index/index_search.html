@@ -1,0 +1,59 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">申请人</label>
+            <div class="layui-input-inline">
+                <input name="username" value="{:input('username')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-inline">
+                <select id="stateElement" name="state" class="layui-select">
+                    <option value="all">全部</option>
+                    <option value="ORDER">申请中</option>
+                    <option value="PASS">等待打款</option>
+                    <option value="COMPLETE">已打款</option>
+                    <option value="all">拒绝</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">起始申请日期</label>
+            <div class="layui-input-inline">
+                <input name="start_date" type="date" value="{:input('start_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">截止申请日期</label>
+            <div class="layui-input-inline">
+                <input name="end_date" type="date" value="{:input('end_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+        </div>
+    </form>
+
+</fieldset>
+<script>
+    var state = "{:input('state')}";
+    if(state != "all"){
+        var stateElement = document.getElementById("stateElement");
+        for(var i = 0;i < stateElement.length;i++){
+            if(state == stateElement[i].value){
+                stateElement[i].selected = true;
+                break;
+            }
+        }
+    }
+    form.render();
+</script>

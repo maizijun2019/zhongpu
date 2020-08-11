@@ -1,0 +1,57 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">标题</label>
+            <div class="layui-input-block">
+                <input name="title" value="{$vo.title|default=''}" class="layui-input" required placeholder="请填写标题">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">类型</label>
+            <div class="layui-input-block">
+                <input name="type" value="{$vo.type|default=''}" class="layui-input" required placeholder="请填写标题">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">类型内容</label>
+            <div class="layui-input-block">
+                <textarea name="type_content" class="layui-textarea" placeholder="选填">{$vo.type_content|default=''}</textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">描述</label>
+            <div class="layui-input-block">
+                <textarea name="content" class="layui-textarea" placeholder="选填">{$vo.content|default=''}</textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label label-required-next">费用</label>
+            <div class="layui-input-block">
+                <input type="number" name="money" value="{$vo.money|default=0}" class="layui-input" required placeholder="请填写正确的费用">
+                <p class="help-block">必填，金额 >= 0且保留两位小数，多余小数位将四舍五入</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    {notempty name='vo.finance_id'}<input type='hidden' value='{$vo.finance_id}' name='finance_id'>{/notempty}
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+
+{block name='script'}
+<script>
+    form.render();
+</script>
+{/block}

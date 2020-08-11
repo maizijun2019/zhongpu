@@ -1,0 +1,90 @@
+<fieldset>
+
+    <legend>条件搜索</legend>
+
+    <form class="layui-form layui-form-pane form-search" action="{:request()->url()}" onsubmit="return false" method="get" autocomplete="off">
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">订单编号</label>
+            <div class="layui-input-inline">
+                <input id="orders_id_value" name="orders_id" value="{:input('orders_id')}" placeholder="请输入订单编号" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">技术咨询师</label>
+            <div class="layui-input-inline">
+                <input name="responsible_username" value="{:input('responsible_username')}" placeholder="请输入用户名或名称" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">企业名称</label>
+            <div class="layui-input-inline">
+                <input name="enterprise_name" value="{:input('enterprise_name')}" placeholder="请输入企业名称" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">项目名称</label>
+            <div class="layui-input-inline">
+                <input name="project_name" value="{:input('project_name')}" placeholder="请输入项目名称" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">部门</label>
+            <div class="layui-input-inline">
+                <select id="department_search" name="department" class="layui-select">
+                    <option value="all">全部</option>
+                    <option value="PROJECT">项目部</option>
+                    <option value="DICHOTOMY">两化部</option>
+                    <option value="KNOWLEDGE">知识产权部</option>
+                    <option value="FINANCE">财务部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">开始日期</label>
+            <div class="layui-input-inline">
+                <input id="start_date_value" type="date" name="start_date" value="{:input('start_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <label class="layui-form-label">结束日期</label>
+            <div class="layui-input-inline">
+                <input id="end_date_value" type="date" name="end_date" value="{:input('end_date')}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline">
+            <button class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+            <button class="layui-btn layui-btn-primary" type="button" onclick="exportExcel()"><i class="layui-icon layui-icon-export"></i>导 出</button>
+        </div>
+    </form>
+
+</fieldset>
+
+<script>
+    var department_value = "{:input('department')}";
+    if(department_value != "" && department_value != "all"){
+        var department_element = document.getElementById("department_search");
+        for(var i = 0;i < department_element.length;i++){
+            if(department_value == department_element[i].value){
+                department_element[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    function exportExcel(){
+        var url = "{:url('exportExcel')}?orders_id=" + $("#orders_id_value").val() + "&project_id=" + $("#project").val() + "&start_date=" + $("#start_date_value").val() + "&end_date=" + $("#end_date_value").val();
+        var a = document.createElement("a");
+        a.setAttribute("href",url);
+        a.click();
+    }
+
+    form.render();
+</script>

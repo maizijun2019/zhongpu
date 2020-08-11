@@ -1,0 +1,78 @@
+{extend name='main'}
+
+{block name="button"}
+
+{if auth("add")}
+<button data-modal='{:url("add")}' data-title="添加数据" class='layui-btn layui-btn-sm layui-btn-primary'>添加数据</button>
+{/if}
+
+{/block}
+
+{block name="content"}
+<div class="layui-tab layui-tab-card think-bg-white">
+    <div class="layui-tab-content think-box-shadow">
+        {include file='project/index_search'}
+        <table class="layui-table margin-top-10" lay-skin="line">
+            {notempty name='list'}
+            <thead>
+            <tr>
+                <th class='list-table-sort-td'>
+                    <button type="button" data-reload class="layui-btn layui-btn-xs">刷 新</button>
+                </th>
+                <th class='text-left nowrap'>项目名称</th>
+                <th class='text-left nowrap'>分类</th>
+                <th class='text-left nowrap'>省、市、区</th>
+                <th class='text-left nowrap'>备注</th>
+                <th class='text-left nowrap'>创建时间</th>
+                <th class='text-left nowrap'>操作</th>
+            </tr>
+            </thead>
+            {/notempty}
+            <tbody>
+            {foreach $list as $key=>$vo}
+            <tr data-dbclick>
+                <td></td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.project_name|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.title|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.province_text|default=''|raw}</span>
+                        <span>{$vo.city_text|default=''|raw}</span>
+                        <span>{$vo.area_text|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <textarea readonly class="layui-text">{$vo.remarks|default=''|raw}</textarea>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    <div class="inline-block sub-span-blue">
+                        <span>{$vo.create_time_text|default=''|raw}</span>
+                    </div>
+                </td>
+                <td class='text-left nowrap'>
+                    {if auth("edit")}
+                    <a data-dbclick class="layui-btn layui-btn-xs" data-title="编辑" data-modal='{:url("edit")}?project_id={$vo.project_id}'>编 辑</a>
+                    {/if}
+                    {if auth("remove")}
+                    <a class="layui-btn layui-btn-danger layui-btn-xs" data-confirm="确定要删除吗?" data-action="{:url('remove')}" data-value="project_id#{$vo.project_id}" data-csrf="{:systoken('remove')}">删 除</a>
+                    {/if}
+                </td>
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+
+        {empty name='list'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+    </div>
+</div>
+{/block}

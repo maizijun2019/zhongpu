@@ -1,0 +1,191 @@
+<form class="layui-form layui-card" action="{:request()->url()}" data-auto="true" method="post" autocomplete="off">
+
+    <div class="layui-card-body">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">项目类型</label>
+            <div class="layui-input-block">
+                <select id="project_level_id" name="project_level_id" required class="layui-select"></select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">项目名称</label>
+            <div class="layui-input-block">
+                <input name="project_name" value='{$vo.project_name|default=""}' required placeholder="请填写项目名称" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">省</label>
+            <div class="layui-input-block">
+                <select id="provinceAdd" lay-filter="provinceAdd" name="province_region_id" required class="layui-select">
+                    <option value="0">请选择省</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item" id="cityDiv" style="display: none;">
+            <label class="layui-form-label">市</label>
+            <div class="layui-input-block">
+                <select id="cityAdd" lay-filter="cityAdd" name="city_region_id" required class="layui-select">
+                    <option value="0">请选择市</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item" id="areaDiv" style="display: none;">
+            <label class="layui-form-label">区</label>
+            <div class="layui-input-block">
+                <select id="areaAdd" name="area_region_id" required class="layui-select">
+                    <option value="0">请选择区</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-block">
+                <textarea name="remarks" placeholder="备注,非必填项,点击右下角可进行拉伸" class="layui-textarea">{$vo.remarks|default=""}</textarea>
+            </div>
+        </div>
+
+    </div>
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>
+    </div>
+
+</form>
+{block name="script"}
+<script>
+    $.ajax({
+        url:"{:url('levelArray')}",
+        method:"GET",
+        success:function(data){
+            tree = JSON.parse(data);
+            var project_level_id = '{$vo.project_level_id|default="0"}';
+            var select = "";
+            for(var i = 0;i < tree.length;i++){
+                select = "";
+                if(project_level_id > 0 && project_level_id == tree[i].project_level_id){
+                    select = "selected";
+                }
+                $("#project_level_id").append("<option " + select + " value='" + tree[i].project_level_id + "'><span class=\"color-desc\">" + tree[i].spl + "</span>" + tree[i].title + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    var province_region_id = "{$vo.province_region_id|default=''}";
+    $.ajax({
+        url:"{:url('region/index/province')}",
+        method:"GET",
+        success:function(data){
+            data = JSON.parse(data);
+            var select = "";
+            for(var i = 0;i < data.length;i++){
+                select = "";
+                if(province_region_id != "" && province_region_id == data[i]["region_id"]){
+                    select = "selected";
+                }
+                $("#provinceAdd").append("<option " + select + " value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+            }
+            form.render();
+        }
+    });
+
+    if(province_region_id > 0){
+        var city_region_id = "{$vo.city_region_id|default=''}";
+        $.ajax({
+            url:"{:url('region/index/city')}?province_region_id=" + province_region_id,
+            method:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                var select = "";
+                for(var i = 0;i < data.length;i++){
+                    select = "";
+                    if(city_region_id != "" && city_region_id == data[i]["region_id"]){
+                        select = "selected";
+                    }
+                    $("#cityAdd").append("<option " + select + " value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                }
+                form.render();
+            }
+        });
+        $("#cityDiv").css("display","block");
+
+        if(city_region_id > 0){
+            var area_region_id = "{$vo.area_region_id|default=''}";
+            $.ajax({
+                url:"{:url('region/index/area')}?city_region_id=" + city_region_id,
+                method:"GET",
+                success:function(data){
+                    data = JSON.parse(data);
+                    var select = "";
+                    for(var i = 0;i < data.length;i++){
+                        select = "";
+                        if(area_region_id != "" && area_region_id == data[i]["region_id"]){
+                            select = "selected";
+                        }
+                        $("#areaAdd").append("<option " + select + " value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                    }
+                    form.render();
+                }
+            });
+            $("#areaDiv").css("display","block");
+        }
+    }
+
+    form.render();
+
+    form.on('select(provinceAdd)', function(data){
+        $("#cityDiv").css("display","none");
+        $("#cityAdd").empty();
+        $("#cityAdd").append("<option value='0'>请选择市</option>");
+        $("#areaDiv").css("display","none");
+        $("#areaAdd").empty();
+        $("#areaAdd").append("<option value='0'>请选择区</option>");
+        if(data.value <= 0){
+            form.render();
+            return;
+        }
+        $.ajax({
+            url:"{:url('region/index/city')}?province_region_id=" + data.value,
+            method:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                for(var i = 0;i < data.length;i++){
+                    $("#cityAdd").append("<option value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                }
+                form.render();
+            }
+        });
+        $("#cityDiv").css("display","block");
+    });
+
+    form.on('select(cityAdd)', function(data){
+        $("#areaDiv").css("display","none");
+        $("#areaAdd").empty();
+        $("#areaAdd").append("<option value='0'>请选择区</option>");
+        if(data.value <= 0){
+            form.render();
+            return;
+        }
+        $.ajax({
+            url:"{:url('region/index/area')}?city_region_id=" + data.value,
+            method:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                for(var i = 0;i < data.length;i++){
+                    $("#areaAdd").append("<option value='" + data[i]["region_id"] + "'>" + data[i]["name"] + "</option>");
+                }
+                form.render();
+            }
+        });
+        $("#areaDiv").css("display","block");
+    });
+</script>
+{/block}
