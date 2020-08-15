@@ -1,0 +1,50 @@
+button {
+  width: 150px;
+  margin-left: 42%;
+  display: disabled;
+}
+form {
+  margin: 8px 50px 0 50px;
+}
+.layui-input-block {
+  width: 70%;
+}
+label {
+  font-size: 13px;
+}
+button {
+  margin-bottom: 50px;
+}
+div.layui-form-item {
+  margin-top: 27px;
+}
+div.layui-form-item:first-child {
+  margin-top: 20px;
+}
+input, textarea {
+  margin-left: 8px;
+}
+#remarks {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+select {
+  width: 200px;
+}
+p {
+  display: none;
+  color: red;
+  font-size: 13px;
+}
+.addUserBtn {
+  width: 35px;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.user {
+  width: 88%;
+  float: left;
+  margin-top: 15px;
+}

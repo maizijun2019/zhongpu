@@ -41,5 +41,6 @@ return [
         '__APP__'    => rtrim(url('@')->build(), '\\/'),
         '__ROOT__'   => rtrim(dirname(request()->basefile()), '\\/'),
         '__PUBLIC__' => rtrim(dirname(request()->basefile(true)), '\\/'),
+        
     ],
 ];

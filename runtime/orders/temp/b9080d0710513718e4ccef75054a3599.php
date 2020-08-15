@@ -1,2 +1,6 @@
-<?php /*a:1:{s:45:"E:\Pro\pro\ZP\app\orders\view\index\test.html";i:1596871884;}*/ ?>
-<div class="layui-form-item"><label class="layui-form-label label-required-next">部门</label><div class="layui-input-block"><select id="department_form" name="department" required class="layui-select"><option value="">请选择部门</option><option value="PROJECT">项目部</option><option value="DICHOTOMY">两化部</option><option value="KNOWLEDGE">知识产权部</option><option value="FINANCE">财务部</option></select></div></div>
+<?php /*a:1:{s:45:"E:\Pro\pro\ZP\app\orders\view\index\test.html";i:1597370873;}*/ ?>
+<div></div><button>btn</button><script>  function test() {
+    $('div').text("aa")
+  }
+  $("button").trigger("test")
+</script>

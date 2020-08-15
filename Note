@@ -1,0 +1,5 @@
+向包含的文件传递参数
+{include file='test.html' title="$title" keywords="aaa" }
+
+在包含的文件中使用变量
+[title] [keywords]

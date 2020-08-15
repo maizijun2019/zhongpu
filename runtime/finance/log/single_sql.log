@@ -110,3 +110,35 @@
 [2020-08-10 10:10:02][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.035862s ]
 [2020-08-10 10:10:02][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.031456s ]
 [2020-08-10 10:10:02][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.028890s ]
+[2020-08-14 15:18:59][sql] CONNECT:[ UseTime:0.001378s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:18:59][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.003893s ]
+[2020-08-14 15:18:59][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.007904s ]
+[2020-08-14 15:18:59][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.001363s ]
+[2020-08-14 15:19:01][sql] CONNECT:[ UseTime:0.001390s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:01][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.003072s ]
+[2020-08-14 15:19:01][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.000720s ]
+[2020-08-14 15:19:01][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000502s ]
+[2020-08-14 15:19:33][sql] CONNECT:[ UseTime:0.001416s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:33][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.001848s ]
+[2020-08-14 15:19:33][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.000613s ]
+[2020-08-14 15:19:33][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000448s ]
+[2020-08-14 15:19:34][sql] CONNECT:[ UseTime:0.001489s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:34][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.001742s ]
+[2020-08-14 15:19:34][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.000658s ]
+[2020-08-14 15:19:34][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000490s ]
+[2020-08-14 15:19:44][sql] CONNECT:[ UseTime:0.001458s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:44][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.002544s ]
+[2020-08-14 15:19:44][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.000758s ]
+[2020-08-14 15:19:44][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000576s ]
+[2020-08-14 15:19:46][sql] CONNECT:[ UseTime:0.001235s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:46][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.001974s ]
+[2020-08-14 15:19:46][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.000838s ]
+[2020-08-14 15:19:46][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000546s ]
+[2020-08-15 08:56:59][sql] CONNECT:[ UseTime:0.011201s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:56:59][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.002052s ]
+[2020-08-15 08:56:59][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.001152s ]
+[2020-08-15 08:56:59][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000514s ]
+[2020-08-15 08:57:02][sql] CONNECT:[ UseTime:0.001215s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:57:02][sql] SHOW FULL COLUMNS FROM `zp_finance` [ RunTime:0.001795s ]
+[2020-08-15 08:57:02][sql] SELECT COUNT(*) AS think_count FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` [ RunTime:0.000595s ]
+[2020-08-15 08:57:02][sql] SELECT `a`.`finance_id`,`a`.`title`,`a`.`content`,`a`.`type`,`a`.`type_content`,`a`.`money`,`a`.`state`,`a`.`create_time`,`a`.`update_time`,`b`.`username`,`b`.`nickname`,`b`.`headimg` FROM `zp_finance` `a` INNER JOIN `system_user` `b` ON `a`.`user_id`=`b`.`id` ORDER BY `a`.`finance_id` DESC LIMIT 0,20 [ RunTime:0.000474s ]

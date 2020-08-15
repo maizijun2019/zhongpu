@@ -3,6 +3,7 @@ namespace app\orders\model;
 use think\Model;
 use think\facade\Db;
 use app\orders\model\ApprovalLog;
+use app\orders\model\DepartmentOrders;
 
 class Order extends Model
 {
@@ -20,6 +21,7 @@ class Order extends Model
   {
     $this->hasMany(ApprovalLog::class, 'order_id', 'orders_id');
   }
+
   // 获取部门的中文名
   protected function getDepartmentAttr($value, $data)
   {
@@ -41,10 +43,23 @@ class Order extends Model
     return $department;
   }
 
+  // 获取部门主管id
+  public function manager($order_id)
+  {
+    $managers = OrderAuth::where('auth_en', 'managerReview')->find();
+    $managers = json_decode($managers->user_ids);
+    foreach ($managers as $key => $val) {
+      if ($key == $this->getData('department')) {
+        return $val;
+      }
+    }
+  }
+  // 获取商务人员
+  
   // 获取流程的中文名
   protected function getStageAttr($value, $data)
   {
-    $state = $data['stage'];
+    $state = $data['stage'] ? $data['stage'] : 0;
     $department = $data['department'];
     // 获取订单流程类型（是哪个部门的流程）
     switch ($department) {
@@ -81,6 +96,7 @@ class Order extends Model
     return Db::table("zp_enterprise")->where('enterprise_id', $enterprise_id)->value('enterprise_name');
   }
 
+  
   // 返回是否结算中文
   public function getSettlementAttr($value)
   {
@@ -91,6 +107,16 @@ class Order extends Model
       $settlementZh = "否";
     }
     return $settlementZh;
+  }
+
+  // 返回是否需要当前登入用户审核
+  public function isNeedMeToApproval()
+  {
+    $loginUser = \request()->session('user')['id'];
+    if ($loginUser == $this->stage_reviewer) {
+      return 1;
+    }
+    return 0;
   }
 
   // 获取全部驳回信息
@@ -152,4 +178,9 @@ class Order extends Model
     return array('isFinish'=>($index == count($stages)-1 ? 1 : 0), 'index'=>$index);
   }
 
+  // 返回流程所属部门的成员id
+  public function getDepartmentMemberIds()
+  {
+    return json_decode(DepartmentOrders::where('name', $this->getData('department'))->value('user_ids'));
+  }
 }

@@ -165,3 +165,83 @@
 [2020-08-10 10:10:07][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.038546s ]
 [2020-08-10 10:10:07][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.148894s ]
 [2020-08-10 10:10:07][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.123588s ]
+[2020-08-11 13:53:05][sql] CONNECT:[ UseTime:0.001508s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-11 13:53:05][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001651s ]
+[2020-08-11 13:53:05][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.006142s ]
+[2020-08-11 13:53:05][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000876s ]
+[2020-08-13 11:29:51][sql] CONNECT:[ UseTime:0.001314s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-13 11:29:51][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001680s ]
+[2020-08-13 11:29:51][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.006298s ]
+[2020-08-13 11:29:51][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000812s ]
+[2020-08-13 13:06:22][sql] CONNECT:[ UseTime:0.002235s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-13 13:06:22][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001743s ]
+[2020-08-13 13:06:22][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.001492s ]
+[2020-08-13 13:06:22][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000964s ]
+[2020-08-13 13:13:24][sql] CONNECT:[ UseTime:0.001868s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-13 13:13:24][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.002139s ]
+[2020-08-13 13:13:24][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.001034s ]
+[2020-08-13 13:13:24][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.001004s ]
+[2020-08-13 13:13:26][sql] CONNECT:[ UseTime:0.003825s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-13 13:13:26][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.002069s ]
+[2020-08-13 13:13:26][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000656s ]
+[2020-08-13 13:13:26][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000710s ]
+[2020-08-14 10:34:10][sql] CONNECT:[ UseTime:0.002526s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 10:34:10][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.003500s ]
+[2020-08-14 10:34:10][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.008584s ]
+[2020-08-14 10:34:10][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.002213s ]
+[2020-08-14 15:18:58][sql] CONNECT:[ UseTime:0.001381s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:18:58][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001786s ]
+[2020-08-14 15:18:58][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.001256s ]
+[2020-08-14 15:18:58][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000653s ]
+[2020-08-14 15:19:01][sql] CONNECT:[ UseTime:0.001320s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:01][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001917s ]
+[2020-08-14 15:19:01][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000720s ]
+[2020-08-14 15:19:01][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.002198s ]
+[2020-08-14 15:19:05][sql] CONNECT:[ UseTime:0.001284s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:05][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.003251s ]
+[2020-08-14 15:19:05][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000939s ]
+[2020-08-14 15:19:05][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000811s ]
+[2020-08-14 15:19:33][sql] CONNECT:[ UseTime:0.001382s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:33][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001966s ]
+[2020-08-14 15:19:33][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000514s ]
+[2020-08-14 15:19:33][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000648s ]
+[2020-08-14 15:19:35][sql] CONNECT:[ UseTime:0.011874s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:35][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001691s ]
+[2020-08-14 15:19:35][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000703s ]
+[2020-08-14 15:19:35][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000696s ]
+[2020-08-14 15:19:43][sql] CONNECT:[ UseTime:0.001401s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:43][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001778s ]
+[2020-08-14 15:19:43][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000920s ]
+[2020-08-14 15:19:43][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000744s ]
+[2020-08-14 15:19:46][sql] CONNECT:[ UseTime:0.011209s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-14 15:19:46][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.002291s ]
+[2020-08-14 15:19:46][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000758s ]
+[2020-08-14 15:19:46][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000866s ]
+[2020-08-15 08:56:50][sql] CONNECT:[ UseTime:0.001545s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:56:50][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.002403s ]
+[2020-08-15 08:56:50][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.001490s ]
+[2020-08-15 08:56:50][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.001326s ]
+[2020-08-15 08:56:52][sql] CONNECT:[ UseTime:0.001614s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:56:52][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.002285s ]
+[2020-08-15 08:56:52][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.001568s ]
+[2020-08-15 08:56:52][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000910s ]
+[2020-08-15 08:57:03][sql] CONNECT:[ UseTime:0.001500s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:57:03][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001653s ]
+[2020-08-15 08:57:03][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000632s ]
+[2020-08-15 08:57:03][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000713s ]
+[2020-08-15 08:58:06][sql] CONNECT:[ UseTime:0.001723s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:58:06][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001979s ]
+[2020-08-15 08:58:06][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000751s ]
+[2020-08-15 08:58:06][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.002536s ]
+[2020-08-15 08:58:09][sql] CONNECT:[ UseTime:0.011240s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:58:09][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001823s ]
+[2020-08-15 08:58:09][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000585s ]
+[2020-08-15 08:58:09][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000752s ]
+[2020-08-15 08:58:09][sql] CONNECT:[ UseTime:0.011641s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 08:58:09][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001674s ]
+[2020-08-15 08:58:09][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000866s ]
+[2020-08-15 08:58:09][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000694s ]
+[2020-08-15 09:40:23][sql] CONNECT:[ UseTime:0.001329s ] mysql:host=localhost;port=3306;dbname=zhongpu_db;charset=utf8mb4
+[2020-08-15 09:40:23][sql] SHOW FULL COLUMNS FROM `zp_consumer` [ RunTime:0.001572s ]
+[2020-08-15 09:40:23][sql] SELECT COUNT(*) AS think_count FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` [ RunTime:0.000520s ]
+[2020-08-15 09:40:23][sql] SELECT `a`.`consumer_id`,`a`.`username`,`a`.`nickname`,`a`.`phone`,`a`.`create_time`,IFNULL(b.enterprise_name,'') enterprise_name FROM `zp_consumer` `a` LEFT JOIN `zp_enterprise` `b` ON `a`.`consumer_id`=`b`.`consumer_id` ORDER BY `a`.`consumer_id` DESC LIMIT 0,20 [ RunTime:0.000838s ]

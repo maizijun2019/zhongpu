@@ -16,7 +16,6 @@ class OrderValidate extends Validate
 	protected $rule = [
         'project_id' =>'require|number',
         'enterprise_id' => 'require|number',
-        'responsible_user_ids' => 'require|min:4',
         'receiving_user_ids' => 'require|min:4',
         'department' => 'require|min:2|max:20',
         'order_number' => 'require|number',

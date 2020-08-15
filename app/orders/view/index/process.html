@@ -73,7 +73,6 @@
     <tr><td>企业名称：</td><td>{$enterprise_name}</td></tr>
     {if $order['stage'] != '初审' && $order['stage'] != '预下单' && $order['stage'] != '审核'}
     <tr><td>下单日期：</td><td>{php}echo date('Y-m-d', $order->create_date){/php}</td></tr>
-    <tr><td>审批日期：</td><td>{$order->approval_time}</td></tr>
     {/if}
 
     {if $order['state'] == 'FINISH'}

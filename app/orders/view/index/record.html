@@ -4,17 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    table.table {
+    table.table, .processContainer {
       width: 85%;
-      margin: 10px auto 20px;
+      margin: 10px auto 40px;
     }
     table caption {
       font-size: 16px;
       margin-bottom: 10px;
     }
+    .process {
+      font-size: 14px;
+      text-indent:2em;
+      color: rgb(153, 118, 112);
+    }
+ 
+    .processContainer p 
+    {
+      font-size: 16px;
+      text-align: center;
+      color: rgb(94, 92, 92);
+    }
   </style>  
 </head>
 <body>
+  <input type="hidden" id="stage" name="stage" value="{$stage}">
+  <div class="processContainer">
+    <p>审核流程</p>
+    <hr>
+    <div class="process">
+    {foreach $orderProcess as $stage}
+      {if $stage == $orderProcess[count($orderProcess) - 1]}
+        <span>{$stage->name}</span>
+      {else/}
+        <span>{$stage->name}</span>
+        <span>-></span>
+      {/if}
+    {/foreach}
+  </div>
+  </div>
+  <hr>
   <table class="layui-table table">
     <caption>通过记录</caption>
     <colgroup>
@@ -33,7 +61,7 @@
     {foreach $logInfo as $record}
     <tr>
       <td>{$record['stage']}</td>
-      <td>{php}echo getOperatorUsername($record['operator']){/php}</td>
+      <td>{php}echo getNickname($record['operator']){/php}</td>
       <td>{php}echo date('Y年m月d日', $record['opt_time']){/php}</td>
     </tr>
     {/foreach}
@@ -58,7 +86,7 @@
     {foreach $rejectInfo as $record}
     <tr>
       <td>{$record['stage']}</td>
-      <td>{php}echo getOperatorUserame($record['user_id']){/php}</td>
+      <td>{php}echo getNickname($record['user_id']){/php}</td>
       <td>{php}echo $record['create_date'] ? date('Y年m月d日', $record['create_date']) : ''{/php}</td>
     </tr>
     <input id="{$record['create_date']}" type="hidden" name="rejectReason" value="{$record['reason']}">
@@ -66,6 +94,9 @@
   </tbody>
   </table>
   <script>
+    layui.use('element', function(){
+      var element = layui.element;
+    });
     if ($('.table2 td')) {
       $('.table2 td').click("on", function() {
         rejectReason = $(this).parent('tr').next().val()
@@ -75,6 +106,8 @@
         })
       })
     }
+    var stage = $('#stage').val();
+    $('.process>span:contains(' + stage + ')').css("color", "red")
   </script>
 
 </body>

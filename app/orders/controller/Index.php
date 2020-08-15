@@ -18,9 +18,11 @@ use app\orders\model\User;
 use app\orders\model\ApprovalLog;
 use app\orders\model\Project;
 use app\orders\model\Enterprise;
+use app\orders\model\DepartmentOrders;
 use think\Request;
 use app\validate\OrderValidate;
 use think\exception\ValidateException;
+use think\facade\Session;
 
 /**
  * 项目管理
@@ -587,12 +589,23 @@ class Index extends Controller
      * 
      */
     public function index(){
-        $this -> title = "项目列表";
-        $list = Order::select();
+        $user_id = \request()->session()['user']['id'];
+        $department = User::find($user_id)->department;
+        Session::set('department', $department);
+        Session::set('myId', $user_id);
+        $myOrderAuth = User::find($user_id)->orders_auth_id;
+        $list = Order::where('stage_reviewer', $user_id)->select();
         $this->fetch('index', [
             'list'=> $list,
+            'myId' => $user_id,
+            'department' => $department,
+            'myOrderAuth' => $myOrderAuth,
         ]);
     }
+
+ 
+    
+
 
     /**
      * 导出Excel表
@@ -686,8 +699,7 @@ class Index extends Controller
 
     /**
      * 添加
-     * @menu true
-     * @auth true
+     * 
      */
     public function add(){
         $this -> _applyFormToken();
@@ -710,11 +722,23 @@ class Index extends Controller
     }
 
     /**
-     * 添加
+     * 预下单
+     * @menu true
+     * @auth true
      */
     public function add2() 
     {
-        $this->fetch('form2');
+        $this->fetch('form2', ['handler' => 'place']);
+    }
+
+    public function edit2($order_id)
+    {
+        $order = Order::find($order_id);
+        $handler = 'edit';
+        // $receivingUsers = \getNicknames($order->receiving_user_ids);
+        // $order->receivingUsers = $receivingUsers;
+
+        $this->fetch('form2', ['handler'=>$handler, 'order' => $order]);
     }
 
     /**
@@ -761,6 +785,8 @@ class Index extends Controller
   
     /**
      * 审核
+     * @menu true
+     * @auth true
      * @param $orders_id
      */
     public function process($orders_id)
@@ -822,84 +848,7 @@ class Index extends Controller
         );
     }
 
-  /**
-   * @auth true
-   * 审核通过 阶段值+1 阶段值是审核阶段数组的索引 代表当前审核的阶段
-   * @param $orders_id
-   * 
-   */
-    public function agree($orders_id, $stage) {
-      $query = Db::table('zp_orders')->where('orders_id', $orders_id);
-      $order = $query->find();
-      $operatorId = Session("user")['id'];
-      if (! $order) {
-        $this->error("该订单不存在");
-      } 
-      // 阶段+1
-      $nextStage = (int)$order['stage']+1;
-     
-      $query->update(['stage'=> $nextStage]);
-      if ($stage == '审核') {
-        $query->update(['approval_user_id'=> $operatorId, 'approval_time'=>\time()]);
-      }
-      // 记录操作
-      $res = ApprovalLog::insert([
-          'order_id'=>$orders_id, 
-          'stage' => $stage,
-          'operator' => $operatorId,
-          'opt_time' => time(),
-        ]);
-      if ($res < 0) {
-        $this->error('审核失败');
-      }
-    }
-    /**
-     * 驳回
-     */
-    public function reject2(Request $request) 
-    {
-      $orders_id = (int)$request->param('orders_id');
-      $rejectReason = $request->param('rejectReason');
-      $stage = $request->param('stage');
-      $order = Order::find($orders_id);
-      if (! $order) {
-          $this->error("该订单不存在");
-      }   
-      // 修改订单状态
-     $update = Order::where('orders_id', $orders_id)->update(['state' => 'REJECT']);
-      
-      if ($update < 0) {
-        $this->error("更新订单失败");
-      }
-      // 修改驳回日志表
-      $user = $this -> app -> session -> get('user'); 
-      $insert = Db::table('zp_orders_reject_log')->insert([
-        "user_id" => $user["id"],
-        "orders_id" => $orders_id,
-        "stage" => $stage,
-        "reason" => $rejectReason,
-        "create_date" => \time(),
-        "create_time" => \time(),
-      ]);
-      if ($insert < 0) {
-        $this->error("修改日志表失败");
-      }
-
-    }
-    /**
-     * 返回到指定流程
-     */
-    public function approval(Request $request)
-    {
-        $opt_time = $request->param('opt_time');
-        $order_id = $request->param('orders_id');
-        $order = Order::find($order_id);
-        if ($order->stage == '初审') {
-            $update = Order::where('orders_id', $order_id)->update(['state'=>'', 'stage'=>0]);
-            return;
-        }
-        return $order->backStage($order_id, $opt_time);
-    }
+  
     /**
      * 查看审核记录
      * @param $order_id 订单编号
@@ -908,93 +857,21 @@ class Index extends Controller
     {
         try {
             $order = Order::find($order_id);
+            $stage = $order->stage;
             $logInfo = $order->getProcessLog($order_id); 
             $rejectInfo = $order->rejectInfo;
+            $orderProcess = DepartmentOrders::getProcess($order_id);
         } catch (Exception $e) {
             $this->error("没有获得相关记录");
         }
 
         $this->fetch('record', [
+            'stage' => $stage,
             'logInfo' => $logInfo,
             'rejectInfo' => $rejectInfo,
+            'orderProcess' => $orderProcess,
         ]);
          
-    }
-
-    /**
-     * 完成审核
-     * @param $order_id
-     */
-    public function finish($order_id) 
-    {
-        // 将订单状态改为完成状态
-        Order::where('orders_id', $order_id)->update(['state' => 'FINISH']);
-    }
-
-    public function check()
-    {
-        $type = request()->param('type');
-        $name = request()->param('name');
-        switch ($type) {
-            case 'user':
-                $res = User::where('username', $name)->find();
-                break;
-            case 'project':
-                $res = Project::where('project_name', $name)->find();
-                break;
-            case 'enterprise':
-                $res = Enterprise::where('enterprise_name', $name)->find();
-                break;
-        }
-        return is_null($res) ? 0 : 1;
-    }
-
-    /**
-     * 下单
-     * @auth true
-     * @menu true
-     */
-    public function place(Request $request)
-    {
-        $check = $request->checkToken('__token__', $request->param());
-        if(false === $check) {
-            throw new ValidateException('invalid token');
-        }
-        $formData = \request()->param();
-        unset($formData['__token__']);
-        // 获取项目 企业 用户 id
-        $formData['project_id'] = Project::where('project_name', $formData['project_id'])->value('project_id');
-        $formData['enterprise_id'] = Enterprise::where('enterprise_name', $formData['enterprise_id'])
-            ->value('enterprise_id');
-        // 审核人id
-        for ($i = 0; $i < count($formData['responsible_user_ids']); $i++) {
-            $userId = User::where('username', $formData['responsible_user_ids'][$i])->value('id');  
-            $formData['responsible_user_ids'][$i] = $userId;
-        }
-        $formData['responsible_user_ids'] = json_encode($formData['responsible_user_ids']);
-
-        // 接单人id
-        for ($i = 0; $i < count($formData['receiving_user_ids']); $i++) {
-            $userId = User::where('username', $formData['receiving_user_ids'][$i])->value('id');
-            $formData['receiving_user_ids'][$i] = $userId;
-        }
-        $formData['receiving_user_ids'] = json_encode($formData['receiving_user_ids']);
-        
-        // 创建时间
-        $formData['create_time'] = time();
-        $formData['stage'] = 0;
-        
-        $validate = new OrderValidate;
-        $res =$validate->check($formData);
-
-        if ($res) {
-            Order::insert($formData );
-            // $this->redirect('/admin.html#/orders/index/index.html');
-            $this->redirect('/zp/public/index.php/admin.html#/zp/public/index.php/orders/index/index');
-        } else {
-            echo $validate->getError();
-        }
-     
     }
 
     /**
@@ -1017,6 +894,6 @@ class Index extends Controller
 
     public function test()
     {
-        $this->page();
+        $this->fetch();
     }
 }

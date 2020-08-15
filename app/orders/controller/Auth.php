@@ -90,6 +90,11 @@ class Auth extends Controller
         }
     }
 
+    /**
+     * 
+     * @auth true
+     * @menu true
+     */
     public function edit(int $orders_auth_id){
         if($this -> request -> isGet() && $orders_auth_id > 0){
             $vo = Db::table($this -> table)
@@ -109,6 +114,10 @@ class Auth extends Controller
         }
     }
 
+        /**
+     * @auth true
+     * @menu true
+     */
     public function remove(int $orders_auth_id){
         if($this -> request -> isPost() && $orders_auth_id > 0){
             Db::table($this -> table)
